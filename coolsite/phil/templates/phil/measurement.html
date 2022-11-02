@@ -1,0 +1,42 @@
+{% extends 'phil/base.html' %}
+{% load static %}
+{% load phil_tags %}
+
+
+
+{% block content %}
+<br>
+<h1>{{title}}</h1>
+
+<div align="center">
+
+<b>Приложение, которое позволит вам вносить замеры своего тела находится в разработке. Оно позволит вам вносить замеры своего тела:
+<br><br><img src="{% static 'phil/images/measurements.png' %}"><br>
+</b><br>
+</div>
+
+<br><br><br>
+<div align="center">
+<table border="0" cellpadding="0" width="100%">
+<tr>
+<!-- Left sidebar  -->
+	<td valign="top" class="leftchapters">
+	<ul>
+  <h3>История замеров</h3>
+
+          {% for m in measurments %}
+            {% if m.pk == mes.pk %}
+		<li class="selected">{{m.Date}}</li>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+		<li class="leftchapters">{{m.Date}}</li>
+
+     {% endif %}
+
+          {% endfor %}
+
+ </td><td width="10px"> </td><td>
+ {% csrf_token %}
+
+
+{% endblock %}

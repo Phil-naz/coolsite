@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="afe6973c-f496-4406-a78b-fec872af7517" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Philip &lt;6544880@mail.ru&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/coolsite/coolsite/settings.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/static/phil/css/styles.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/templates/phil/about.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/templates/phil/about_django.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/templates/phil/base.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/templatetags/phil_tags.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/utils.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/phil/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coolsite/women/utils.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FBMsFH4anAmQhGoIIArlD4G0Ds" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/macbookair/Documents/Python/DJANGO/djsite/coolsite/phil/templates/phil",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/coolsite/phil/templates/phil" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="afe6973c-f496-4406-a78b-fec872af7517" name="Changes" comment="test 02.11.22" />
+      <created>1663961229428</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663961229428</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Commit#5:&#10;Page for adding book workin only for authorizated users;&#10;Dutton 'Добавить книгу' on pages 'Книги' (Books) and on pages for each book showing only for authorizated users;&#10;When adding a book via the 'addbook' page, the 'slug' field is automatically added to the database;&#10;Made new chapter for adding articles (texts);&#10;When user adding article, user data transsmised to SQL table automaticaly;&#10;On pages of each article show date and time of add">
+      <created>1664712448649</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664712448650</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit#5:&#10;Page for adding book workin only for authorizated users;&#10;Dutton 'Добавить книгу' on pages 'Книги' (Books) and on pages for each book showing only for authorizated users;&#10;When adding a book via the 'addbook' page, the 'slug' field is automatically added to the database;&#10;Made new chapter for adding articles (texts);&#10;When user adding article, user data transsmised to SQL table automaticaly;&#10;On pages of each article show date and time of add">
+      <created>1664737352314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664737352314</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit #6:&#10;Start making chapter for saving measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django">
+      <created>1664737503611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664737503611</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit #6:&#10;Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django">
+      <created>1664866308156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664866308156</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit #6:&#10;Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django">
+      <created>1664867223019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664867223020</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test 02.11.22">
+      <created>1667412895420</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667412895420</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test 02.11.22">
+      <created>1667413070453</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667413070453</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test 02.11.22">
+      <created>1667413191115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667413191115</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test 02.11.22">
+      <created>1667413780672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667413780672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/Live-effectively" />
+      <path value="$PROJECT_DIR$/coolsite" />
+      <path value="$PROJECT_DIR$/coolsite_menu" />
+      <path value="$PROJECT_DIR$/djsite" />
+    </ignored-roots>
+    <MESSAGE value="Start making chapter for saving measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django" />
+    <MESSAGE value="Commit#5:&#10;Page for adding book workin only for authorizated users;&#10;Dutton 'Добавить книгу' on pages 'Книги' (Books) and on pages for each book showing only for authorizated users;&#10;When adding a book via the 'addbook' page, the 'slug' field is automatically added to the database;&#10;Made new chapter for adding articles (texts);&#10;When user adding article, user data transsmised to SQL table automaticaly;&#10;On pages of each article show date and time of add" />
+    <MESSAGE value="Commit #6:&#10;Start making chapter for saving measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django" />
+    <MESSAGE value="Commit #2022-40:&#10;Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django" />
+    <MESSAGE value="Commit #42-2022" />
+    <MESSAGE value="Commit #6:&#10;Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.&#10;Make pages about me: about_analytics, about_django" />
+    <MESSAGE value="test 31.10.22" />
+    <MESSAGE value="test 01.11.22" />
+    <MESSAGE value="test 02.11.22" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 02.11.22" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>

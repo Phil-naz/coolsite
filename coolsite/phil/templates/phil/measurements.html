@@ -1,0 +1,101 @@
+{% extends 'phil/base.html' %}
+{% load static %}
+{% load phil_tags %}
+
+
+
+{% block content %}
+    <h1>{{title}}</h1>
+
+    <div align="center">
+
+        <b>Приложение, которое позволит вам вносить замеры своего тела находится в разработке. Оно позволит вам вносить замеры своего тела:</b>
+    <br><br><img src="{% static 'phil/images/measurements.png' %}"><br>
+    </b><br>
+    </div>
+
+    <br>
+
+<table border="0" cellpadding="0" width="100%"">
+<tr valign="top">
+<td width="450" bgcolor="#eee" align="center">
+<!-- Left sidebar  -->
+    {% if request.user.is_authenticated %}
+
+  <h2>История замеров</h2>
+<table border="1" cellspacing="0,5" cellpadding="4">
+<tr class="table_head">
+<td>Дата</td>
+<td>Плечи</td>
+<td>Грудь</td>
+<td>Талия</td>
+<td>Ягодицы</td>
+<td>Бедра</td>
+<td>Вес</td>
+</tr>
+
+
+
+          {% for m in measurements %}
+            {% if request.user.id == m.user.id %}
+<tr class="table_data">
+<td nowrap>{{m.Date|date:"d-M-Y"}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Shoulders}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Chest}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Waist}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Buttocks}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Hips}}</td>
+     {% endif %}
+            {% if request.user.id == m.user.id %}
+<td>{{m.Weight}}</td>
+
+     {% endif %}
+
+          {% endfor %}
+
+</tr>
+</table>
+</td>
+
+    {% else %}
+<td width="100%">
+    <div align="center"><b><a href="{% url 'phil_login' %}">Авторизируйтесь</a>, при необходимости <a href="{% url 'phil_register' %}">зарегистрируйтесь</a>, тут будет отображаться ваша история замеров тела.</b></div>
+    <br><br>
+</td>
+</tr>
+</table>
+</td>
+	{% endif %}
+
+
+    {% if request.user.is_authenticated %}
+<td width="10">&nbsp;</td>
+<td>
+    <form action="{% url 'measurements' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>{{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+    <div class="form-error">{{ f.errors }}</div>
+    {% endfor %}
+
+    <button type="submit" class="button_measurements">Добавить</button><br><br>
+    </form></div>
+</td>
+</tr>
+</table>
+    </div>
+    {% endif %}
+
+{% endblock %}
