@@ -10,9 +10,10 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" href="{% static 'women/images/main.ico' %}" type="image/x-icon"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<table width="100%" border="0"><tr><td width="100%" height="30px" bgcolor="white" align="center"><a href="{% url 'django' %}">Вернуться</a></td> </tr></table>
 
 	{% block mainmenu %}
+
+
 		<div class="header">
 			<ul id="mainmenu" class="mainmenu">
 			<li class="logo"><a href="{% url 'home' %}"><div class="logo"></div></a></li> <!-- LOGO -->
@@ -86,36 +87,34 @@
 	<div class="content-text">
 {% block content %}
 {% endblock %}
-{% if page_obj.has_other_pages %}   <!-- Don't show pages if it is no other pages -->
+{% if page_obj.has_other_pages %}
 <nav class="list-pages">
-	<ul>
-{% if page_obj.has_previous %}   <!-- Button to the previous page -->
+    <ul>
+{% if page_obj.has_previous %}
 <li class="page-num">
-	<a href="?page={{ page_obj.previous_page_number }}">&lt</a>
+	<a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
 </li>
 {% endif %}
 
-		{% for p in paginator.page_range %}   <!-- 3 strings for don't select current page -->
+        {% for p in paginator.page_range %}
 		{% if page_obj.number == p %}
-		<li class="page-num page-num-selected">{{ p }}</li>
-		{% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}  <!-- For showing several previous and next links to pages -->
-		<li class="page-num">
-			<a href="?page={{ p }}">{{ p }}</a>
-		</li>
+        <li class="page-num page-num-selected">{{ p }}</li>
+		{% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2  %}
+        <li class="page-num">
+            <a href="?page={{ p }}">{{ p }}</a>
+        </li>
 		{% endif %}
-		{% endfor %}
+        {% endfor %}
 
-{% if page_obj.has_next %}   <!-- Button to the next page -->
+{% if page_obj.has_next %}
 <li class="page-num">
-	<a href="?page={{ page_obj.next_page_number }}">&gt</a>
+	<a href="?page={{ page_obj.next_page_number }}">&gt;</a>
 </li>
 {% endif %}
 
-
-	</ul>
-{% endif %}
+    </ul>
 </nav>
-
+{% endif %}
 	</div>
 <!-- Конец блока контента -->
 
@@ -123,20 +122,8 @@
 </td></tr>
 <!-- Footer -->
 <tr><td valign=top>
-	<div id="footer" align="center">
-		<p><div id="current_date_time_block2"></div>
-&copy; <script language="javascript" type="text/javascript"><!--
-var d = new Date();
-
-var day=new Array("Воскресенье","Понедельник","Вторник",
-"Среда","Четверг","Пятница","Суббота");
-
-var month=new Array("января","февраля","марта","апреля","мая","июня",
-"июля","августа","сентября","октября","ноября","декабря");
-
-document.write(d.getFullYear() + " г.");
-//--></script>
-		Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, строго запрещено.</p>
+	<div id="footer">
+		<p>&copy; 2021 Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, строго запрещено.</p>
 	</div>
 </td></tr></table>
 <!-- Конец footer'а и страницы -->

@@ -170,6 +170,7 @@ img.img-book {
 	font-family: Yandex Sans Display Light;
 }
 .content-text h1 {font-size: 32px;}
+
 .list-pages {
 	text-align: center;
 	margin: 0 0 20px 0;
@@ -188,7 +189,7 @@ img.img-book {
 	font-size: 24px;
 	text-decoration: none;
 }
-.list-pages .page-num, .page-num-selected {
+.list-pages, .page-num, .page-num-selected {
 	display: inline-block;
 	width: 60px;
 	height: 44px;
@@ -196,16 +197,17 @@ img.img-book {
 	border: 1px solid #d0d0d0;
 	border-radius: 30px;
 }
-.list-pages .page-num:hover {
+.list-pages, .page-num:hover {
 	box-shadow: 3px 3px 1px #d0d0d0;
 }
-.list-pages .page-num-selected {
+.list-pages, .page-num-selected {
 	border: none;
 	color: #000;
 	font-size: 20px;
 }
-.list-pages .page-num-selected:hover {
+.list-pages, .page-num-selected:hover {
 	box-shadow: none;
 }
+
 ul.mainmenu li.last {float: right; color: #fdc073}
 

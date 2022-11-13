@@ -16,7 +16,7 @@ from .forms import *
 
 # backup copy 04 October 2022 Commit 2022-40: . Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.
 # Make pages about me: about_analytics, about_django
-test
+
 #  main menu  is in 'utils.py'
 
 # for DEF make for authorized users add next function:
@@ -62,15 +62,6 @@ def measurement(request, user_id):
         'title': 'Замеры',
     }
     return render(request, 'phil/measurement.html', context=context)
-
-def measurements(request):
-    context = {
-        'title': 'Замеры тела',
-        'menu': menu,
-    }
-    return render(request, 'phil/measurements.html', context=context)
-
-
 class BooksList(DataMixin, ListView):
     paginate_by = 5   # count of elements on the page
     model = Books

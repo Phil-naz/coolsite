@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'captcha',
     'women.apps.WomenConfig',
     'phil.apps.PhilConfig',
+    'django.contrib.sites',
+    'account'
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -54,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'account.middleware.LocaleMiddleware',
+    'account.middleware.TimezoneMiddleware',
 ]
 
 ROOT_URLCONF = 'coolsite.urls'
@@ -84,13 +88,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'c65128_phil_na4u_ru',
-#         'USER': 'c65128_phil_na4u_ru',
-#         'PASSWORD': 'BoDfuCoqdacog79',
-#             #open('/Users/macbookair/Documents/Python/DJANGO/djsite/coolsite/coolsite/sql_pass.txt'),
-#         'HOST': 'postgres.c65128.h2',
-# #        'PORT' : '3306',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'phil_na4u_ru',
+        # 'USER': 'phil_na4u_ru',
+        # 'PASSWORD': 'BoDfuCoqdacog79',
+        #     #open('/Users/macbookair/Documents/Python/DJANGO/djsite/coolsite/coolsite/sql_pass.txt'),
+        # 'HOST': '45.86.182.171',
+        # 'PORT' : '5432',
     }
 }
 

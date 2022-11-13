@@ -44,7 +44,7 @@ def about(request):   # 'DataMixin' is not working here!
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'women/about.html', {'page_obj': page_obj, 'menu': menu, 'title': 'О сайте'})
+    return render(request, 'women/about.html', {'menu': menu, 'title': 'О сайте'})
 
 class AddPage(LoginRequiredMixin, DataMixin, CreateView):   # 'LoginRequiredMixin' working only with classes. For using in function DEF:
                                                             # over DEF add code '@login_required and import this function
@@ -61,9 +61,15 @@ class AddPage(LoginRequiredMixin, DataMixin, CreateView):   # 'LoginRequiredMixi
         c_def = self.get_user_context(title = 'Добавление статьи')   # class 'DataMixin'
         return dict(list(context.items()) + list(c_def.items()))   # combine (объединяем) classes ‘context’ & c_def (local data for transferring)
 
+def addpage1(request):
+    if request.method == 'POST':
+        form = AddPostForm1(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = AddPostForm1()
+    return render(request, 'women/addpage1.html', {'form': form, 'menu':menu, 'title': 'Добавление статьи'})
 
-def contact(request):
-    return HttpResponse('<h1>Feedback page</h1>')
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')

@@ -26,7 +26,7 @@ class Books(models.Model):
     class Meta:
         verbose_name = 'Книги'  # название в админ панели
         verbose_name_plural = 'Книги'  # множ. число в админ панели
-        ordering = ['name']  # сортировка, "-" - обр.порядок. Ordering for view at site
+        ordering = ['-id']  # сортировка, "-" - обр.порядок. Ordering for view at site
 
 
 class Quotes(models.Model):
@@ -75,11 +75,11 @@ class Booktype(models.Model):
 
 
 class Articles(models.Model):
-    title = models.CharField(max_length=255, verbose_name="Название")  # 'verbose_name' for view in the admin panel
+    title = models.CharField(max_length=255, verbose_name="Название", null=True, blank=True)  # 'verbose_name' for view in the admin panel
     slug = AutoSlugField(populate_from='title', unique_with='user')
     photo = models.ImageField(upload_to="article_photos", verbose_name="Фотография", null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Кто добавил', blank=True, null=True)
-    text = models.TextField(blank=True, verbose_name="Статья")
+    text = models.TextField(verbose_name="Статья", null=True, blank=True)
     time_create = models.DateTimeField(auto_now_add=True, verbose_name="Время создания")
     time_update = models.DateTimeField(auto_now=True, verbose_name="Время изменения")
     is_published = models.BooleanField(default=True, verbose_name="Публикация")

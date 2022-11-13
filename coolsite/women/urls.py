@@ -7,6 +7,7 @@ urlpatterns = [
     path('', cache_page(60)(WomenHome.as_view()), name='home'),   # 60 - count seconds for caching
     path('about/', about, name='about'),
     path('addpage/', AddPage.as_view(), name='add_page'),
+    path('addpage1/', addpage1, name='add_page1'),
     path('contact/', ContactFormView.as_view(), name = 'contact'),
     path('login/', LoginUser.as_view(), name='login'),
     path('logout/', logout_user, name='logout'),

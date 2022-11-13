@@ -29,7 +29,7 @@
 			{% if request.user.is_authenticated %}
 			<li class="last"> {{user.first_name}} | <a href="{% url 'phil_logout' %}">&nbsp;Выйти</a></li>
 			{% else %}
-			<li class="last"><a href="{% url 'phil_register' %}">Регистрация</a>&nbsp;&nbsp;<a href="{% url 'phil_login' %}">Войти | &nbsp;</a></li>
+			<li class="last"><a href="{% url 'phil_login' %}">Войти</a> | <a href="{% url 'phil_register' %}">Регистрация</a></li>
 			{% endif %}
 
 			<div class="clear"></div>
