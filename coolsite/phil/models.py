@@ -26,7 +26,7 @@ class Books(models.Model):
     class Meta:
         verbose_name = 'Книги'  # название в админ панели
         verbose_name_plural = 'Книги'  # множ. число в админ панели
-        ordering = ['name']  # сортировка, "-" - обр.порядок. Ordering for view at site
+        ordering = ['-id']  # сортировка, "-" - обр.порядок. Ordering for view at site
 
 
 class Quotes(models.Model):
@@ -92,8 +92,8 @@ class Articles(models.Model):
             'text_slug': self.slug})  # функция reverse составляет url, ‘POST’ - URL name from file ‘URL.PY’
 
     class Meta:
-        verbose_name = 'Статья'  # название в админ панели
-        verbose_name_plural = 'Статьи'  # множ. число в админ панели
+        verbose_name = 'Заметка'  # название в админ панели
+        verbose_name_plural = 'Заметки'  # множ. число в админ панели
         ordering = ['-time_create', 'title']  # сортировка, "-" - обр.порядок. Ordering for view at site
 
 class Measurements(models.Model):

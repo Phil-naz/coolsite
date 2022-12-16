@@ -13,7 +13,8 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent   # coolsite
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # codemy.com
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,6 +42,9 @@ INSTALLED_APPS = [
     'captcha',
     'women.apps.WomenConfig',
     'phil.apps.PhilConfig',
+    'theblog',
+    'members',
+    'ckeditor',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -84,19 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'c65128_phil_na4u_ru',
-#         'USER': 'c65128_phil_na4u_ru',
-#         'PASSWORD': 'BoDfuCoqdacog79',
-#             #open('/Users/macbookair/Documents/Python/DJANGO/djsite/coolsite/coolsite/sql_pass.txt'),
-#         'HOST': 'postgres.c65128.h2',
-# #        'PORT' : '3306',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -134,6 +127,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = []
+    #     (
+    # os.path.join(BASE_DIR, 'static'),
+    # )
 
 # BASE_DIR = текущая рабочая папка проекта
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -150,3 +146,6 @@ CACHES = {
 }
 
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+LOGIN_REDIRECT_URL = 'theblog_home'
+LOGOUT_REDIRECT_URL = 'theblog_home'

@@ -16,7 +16,6 @@ from .forms import *
 
 # backup copy 04 October 2022 Commit 2022-40: . Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.
 # Make pages about me: about_analytics, about_django
-test
 #  main menu  is in 'utils.py'
 
 # for DEF make for authorized users add next function:
@@ -118,7 +117,7 @@ class AddBook(LoginRequiredMixin, DataMixin, CreateView):  # 'LoginRequiredMixin
 
 def about(request):
     context = {
-        'title': 'Обо мне',
+        'title': 'Филипп Назаренко: обо мне',
         'menu': menu,
     }
     return render(request, 'phil/about.html', context=context)

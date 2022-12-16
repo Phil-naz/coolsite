@@ -6,15 +6,19 @@ html, body {
 	width: 100%;
 	color: #444;
 }
+a {color: #fa1400;}
 a:hover {
 	font-weight: 600;
+	color: #ed7732;
 }
+a:visited {color: #f0cc58;}
+.about {color: black}
+a:hover.about {color: black}
 .header {
-
     width: 100%;
 	position: fixed;       /* Fixing top menu */
 	top: 0px;              /* Fixing top menu */
-	background: #3C2922;   /* Background for top menu */
+	background: #f2e0ae;   /* Background for top menu */
 	list-style: none;
 }
 .logo {                    /* Style for logo */
@@ -38,7 +42,7 @@ ul.mainmenu li {   /* setting distances near words of top menu */
 }
 ul.mainmenu li.logo {margin: 0;}
 .last {
-    color: #fdc073;
+    color: #e6472e;
     float: right;
 	text-decoration: none;
 	font-size: 14px; /* font size of menu's point 'Войти' */
@@ -57,11 +61,11 @@ ul.control li.last:after {content: "\2192"; padding: 0 0 0 10px;}
 }
 
 ul.mainmenu li a {
-	color: #fdc073;   /* Change link's color in top menu */
+	color: #e6472e;   /* Change link's color in top menu */
 	text-decoration: none;   /* Delete underline in top menu */
 }
 ul.mainmenu li a:hover {
-	color: #FDA83D;
+	color: #ed712f;
 }
 .leftchapters {
     background: #eee;
@@ -116,7 +120,7 @@ ul.mainmenu li a:hover {
 	text-decoration: none;
 }
 a.contact {
-    color: #fdc073; /* #318CE7; */
+    color: #e6472e;
 }
 img.img {
 	max-width: 100px;
@@ -164,4 +168,41 @@ img.img-book {
 }
 .list {
     margin-top: 0; /* Отступ сверху */
+}
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 44px;
+	padding: 16px 0 0 0;
+	border: 1px solid #d0d0d0;
+	border-radius: 30px;
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0;
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 20px;
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none;
 }
