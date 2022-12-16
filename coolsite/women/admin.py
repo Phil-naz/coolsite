@@ -5,7 +5,7 @@ from .models import *                            # импорт для отоб�
 
 class WomenAdmin(admin.ModelAdmin):               #дополнительные поля в админке
     list_display = ('id', 'title', 'time_create', 'get_html_photo', 'is_published')
-    fields = ('get_html_photo2', 'slug', 'title', 'content', 'photo', 'is_published', 'time_create', 'time_update')   # fields at page of each object
+    fields = ('title', 'slug', 'content', 'photo', 'is_published', 'cat')   # fields at page of each object
     readonly_fields = ('time_create', 'time_update', 'get_html_photo', 'get_html_photo2')
     list_display_links = ('id', 'title')   # make links for editing
     search_fields = ('title', 'content')   # for searching in this columns

@@ -64,12 +64,6 @@ class AddTextForm(forms.ModelForm): # it is for "Категория не выб�
             'text': forms.Textarea(attrs={'cols': 60, 'rows': 10}),
         }
 
-    def clean_title(self):
-        title = self.cleaned_data['title']
-        if len(title) > 200:
-            raise ValidationError('Длина превышает 200 символов')
-        return
-
 
 class AddMeasurements(forms.ModelForm):
     class Meta:  # this class for formatting view of fields
