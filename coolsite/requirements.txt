@@ -18,3 +18,4 @@ sqlparse==0.4.2
 tqdm==4.63.0
 tzdata==2022.1
 mysqlclient==2.1.1
+pytils==0.4.1
