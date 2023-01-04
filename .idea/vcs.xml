@@ -3,7 +3,14 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite - multilingual not working/desktop-tutorial" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/coolsite/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite_/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite_crashed 22:12:16/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite_crashed/desktop-tutorial" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/coolsite_menu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite — good translation part2/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite — soft skills translated+analytics/desktop-tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/coolsite — soft skills translated/desktop-tutorial" vcs="Git" />
   </component>
 </project>

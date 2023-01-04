@@ -1,0 +1,16 @@
+{% extends 'phil/base.html' %}
+
+{% block content %}
+<br>
+<h1>{{book.title}}</h1>
+
+{% if book.photo %}
+<p><img class="img-book" src="{{book.photo.url}}"></p>
+{% endif %}
+
+<h3 class="head">Описание книги (автор или издательство)</h3>
+
+    {% for b in book_left %}
+        <p>{{b.author_description}}</p>
+    {% endfor %}
+{% endblock content %}

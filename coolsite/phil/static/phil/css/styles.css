@@ -16,7 +16,7 @@ a:visited {color: #f0cc58;}
 a:hover.about {color: black}
 .header {
     width: 100%;
-	position: fixed;       /* Fixing top menu */
+/*	position: fixed;       /* Fixing top menu */
 	top: 0px;              /* Fixing top menu */
 	background: #f2e0ae;   /* Background for top menu */
 	list-style: none;
@@ -30,9 +30,7 @@ ul.mainmenu {
 	margin: 0;
 	height: 60px;   /* thickness (толщина) of topmenu line */
 	font-size: 14px; /* menu font size */
-
 	/* overflow: hidden;   words are transferred when there is not enough space */
-
 }
 ul.mainmenu li {   /* setting distances near words of top menu */
 	float: left;
@@ -205,4 +203,12 @@ img.img-book {
 }
 .list-pages .page-num-selected:hover {
 	box-shadow: none;
+}
+.quote {
+	background: url('../images/quote.png') no-repeat;
+	width: 622px;
+	height: 350px;
+	text-align: center;
+	vertical-align: middle;
+
 }

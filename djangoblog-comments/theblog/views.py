@@ -3,7 +3,13 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, Http404, HttpResponseNotFound
+
+def my_view(request):
+    sentence = 'Welcome to my site.'
+    output = (sentence)
+    return HttpResponse(output)
+
 #def home(request):
 #	return render(request, 'home.html', {})
 
@@ -80,6 +86,11 @@ class AddCommentView(CreateView):
 		return super().form_valid(form)
 
 	success_url = reverse_lazy('home')
+
+
+def categories(request, catid):
+    return HttpResponse(f"<h1>Статьи по категориям</h1>{catid}</p>")	
+
 
 class AddCategoryView(CreateView):
 	model = Category

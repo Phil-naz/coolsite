@@ -9,8 +9,8 @@
 
     <div align="center">
 
-        <b>Приложение, которое позволит вам вносить замеры своего тела находится в разработке. Оно позволит вам вносить замеры своего тела:</b>
-    <br><br><img src="{% static 'phil/images/measurements.png' %}"><br>
+        <b>An application that will allow you to take measurements of your body is in development. It will allow you to record measurements of your body:</b>
+        <br><br><img src="{% static 'phil/images/measurements.png' %}"><br>
     </b><br>
     </div>
 
@@ -22,16 +22,16 @@
 <!-- Left sidebar  -->
     {% if request.user.is_authenticated %}
 
-  <h2>История замеров</h2>
+  <h2>Story of body measurements</h2>
 <table border="1" cellspacing="0,5" cellpadding="4">
 <tr class="table_head">
-<td>Дата</td>
-<td>Плечи</td>
-<td>Грудь</td>
-<td>Талия</td>
-<td>Ягодицы</td>
-<td>Бедра</td>
-<td>Вес</td>
+<td>Date</td>
+<td>Shoulders</td>
+<td>Chest</td>
+<td>Waist</td>
+<td>Buttocks</td>
+<td>Hips</td>
+<td>Weight</td>
 </tr>
 
 
@@ -69,7 +69,7 @@
 
     {% else %}
 <td width="100%">
-    <div align="center"><b><a href="{% url 'phil_login' %}">Авторизируйтесь</a>, при необходимости <a href="{% url 'phil_register' %}">зарегистрируйтесь</a>, тут будет отображаться ваша история замеров тела.</b></div>
+    <div align="center"><b><a href="{% url 'phil_login' %}">Log in</a>, if necessary <a href="{% url 'phil_register' %}">register</a>, your body measurement history will be displayed here.</b></div>
     <br><br>
 </td>
 </tr>
@@ -90,7 +90,7 @@
     <div class="form-error">{{ f.errors }}</div>
     {% endfor %}
 
-    <button type="submit" class="button_measurements">Добавить</button><br><br>
+    <button type="submit" class="button_measurements">Add</button><br><br>
     </form></div>
 </td>
 </tr>

@@ -1,0 +1,14 @@
+{% extends 'phil/base.html' %}
+
+{% block content %}
+
+<ul>
+    {% for p in posts %}
+    <li>
+        <h2>{{p.name}}</h2>
+        <p>{{p.description}}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

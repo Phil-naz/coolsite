@@ -1,5 +1,7 @@
 {% extends 'phil/base.html' %}
 {% load phil_tags %}
+{% load i18n %}
+
 
 {% block content %}
 <table border="0" cellpadding="0" cellspacing="0">
@@ -8,9 +10,9 @@
 	<td valign="top" class="leftchapters">
 	<ul>
 					{% if request.user.is_authenticated %}
-			<li><a href="{% url 'addbook' %}"><button><div align="center">Добавить книгу</div></button></a></li><br>
+			<li><a href="{% url 'addbook' %}"><button><div align="center">{% trans 'Добавить книгу' %}</div></button></a></li><br>
 					{% endif %}
-		<li class="leftchapters"><a href="{% url 'books' %}">Все книги</a></li>
+		<li class="leftchapters"><a href="{% url 'books' %}">{% trans 'Все книги' %}</a></li>
 		{% book_list as book_list %}
         {% for p in book_list %}
 			{% if p.pk == book.pk %}
@@ -31,7 +33,6 @@
 <p><img class="img-book" src="{{book.photo.url}}"></p>
 {% endif %}
 
-<h3 class="head">Описание книги (автор или издательство)</h3>
 
 
 {{book.author_description|linebreaks}}

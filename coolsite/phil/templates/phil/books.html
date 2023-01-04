@@ -1,5 +1,6 @@
 {% extends 'phil/base.html' %}
 {% load phil_tags %}
+{% load i18n %}
 
 {% block content %}
 <table border="0" cellpadding="0" cellspacing="0">
@@ -8,9 +9,9 @@
 	<td valign="top" class="leftchapters">
 	<ul>
 					{% if request.user.is_authenticated %}
-			<li><a href="{% url 'addbook' %}"><button><div align="center">Добавить книгу</div></button></a></li><br>
+			<li><a href="{% url 'addbook' %}"><button><div align="center">{% trans 'Добавить книгу' %}</div></button></a></li><br>
 					{% endif %}
-		<li class="selected">Все книги</li>
+		<li class="selected">{% trans 'Все книги' %}</li>
 		{% book_list as book_list %}
         {% for p in book_list %}
 			{% if p.pk == book.pk %}
@@ -49,7 +50,7 @@
 
 
     <table width = "100%"><tr>
-        <td class="link-read-post" align="right"><a href="{{ p.get_absolute_url }}">Описание и цитаты</a></td>
+        <td class="link-read-post" align="right"><a href="{{ p.get_absolute_url }}">{% trans 'Описание и цитаты' %}</a></td>
 
     </tr></table>
 

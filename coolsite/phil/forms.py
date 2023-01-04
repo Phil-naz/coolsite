@@ -36,7 +36,7 @@ class AddBookForm(forms.ModelForm):
 
     class Meta:  # this class for formatting view of fields
         model = Books
-        fields = ['name', 'author', 'photo', 'author_description', 'publishing_house']
+        fields = ['name_ru', 'name_en', 'author_ru', 'author_en', 'photo', 'author_description_ru', 'author_description_en', 'publishing_house']
         widgets = {  # this is for individual design fields
             'name': forms.TextInput(attrs={'class': 'form-input'}),
             'slug': forms.TextInput(attrs={'class': 'form-input'}),
@@ -54,15 +54,21 @@ class AddBookForm(forms.ModelForm):
 class AddTextForm(forms.ModelForm): # it is for "Категория не выбрана" шnstead of "---"
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['text'].empty_label = "Категория не выбрана"
+        self.fields['text_ru'].empty_label = "Категория не выбрана"
 
     class Meta:
         model = Articles
-        fields = ['title', 'text', 'photo', 'is_published']
+        fields = ['title_ru', 'title_en', 'text_ru', 'text_en', 'photo', 'is_published']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-input'}),
             'text': forms.Textarea(attrs={'cols': 60, 'rows': 10}),
         }
+
+    def clean_title(self):
+        title = self.cleaned_data['title']
+        if len(title) > 200:
+            raise ValidationError('Длина превышает 200 символов')
+        return
 
 
 class AddMeasurements(forms.ModelForm):

@@ -14,16 +14,10 @@ from .models import *
 from .forms import *
 
 
-# backup copy 04 October 2022 Commit 2022-40: . Start making chapter for saving body measurments. Add classes: Measurements, Quotes, Read_books, Booktype.
-# Make pages about me: about_analytics, about_django
-<<<<<<< HEAD
-=======
+# backup copy 04 January 2023. Commit 01/2023: it is multilangual
 
->>>>>>> origin/master
-#  main menu  is in 'utils.py'
+#  main menu  is in 'base.html'
 
-# for DEF make for authorized users add next function:
-# @login_required # make import for this function
 def index(request):
     context = {
         'title': 'Страница Филиппа Назаренко',
@@ -34,7 +28,6 @@ def index(request):
 def measurements_making(request):
     context = {
         'title': 'Замеры тела',
-        'menu': menu,
     }
     return render(request, 'phil/measurements_making.html', context=context)
 
@@ -61,10 +54,17 @@ def measurement(request, user_id):
     context = {
         'mes': mes,
         'measurments': Measurements.objects.all(),
-        'menu': menu,
-        'title': 'Замеры',
+        'title': 'Body measurement',
     }
     return render(request, 'phil/measurement.html', context=context)
+
+def measurements(request):
+    context = {
+        'title': 'Body measurements',
+    }
+    return render(request, 'phil/measurements.html', context=context)
+
+
 class BooksList(DataMixin, ListView):
     paginate_by = 5   # count of elements on the page
     model = Books
@@ -112,31 +112,21 @@ class AddBook(LoginRequiredMixin, DataMixin, CreateView):  # 'LoginRequiredMixin
 
 def about(request):
     context = {
-        'title': 'Филипп Назаренко: обо мне',
-        'menu': menu,
+        'title': 'Philip Nazarenko: about me',
     }
     return render(request, 'phil/about.html', context=context)
 
 def about_analytics(request):
     context = {
         'title': 'Аналитика (с использованием Excel, SQL, Python)',
-        'menu': menu,
     }
     return render(request, 'phil/about_analytics.html', context=context)
 
 def about_django(request):
     context = {
         'title': 'Разработка веб-проектов с использованием фреймворка Django (Python)',
-        'menu': menu,
     }
     return render(request, 'phil/about_django.html', context=context)
-
-def excel(request):
-    context = {
-        'title': 'Система, созданная мною на Excel (Google Sheets)',
-        'menu': menu,
-    }
-    return render(request, 'phil/excel.html', context=context)
 
 def login(request):
     return HttpResponse('<h1>Phil app’s login page</h1>')
@@ -181,15 +171,6 @@ def showtexts(request):
     }
     return render(request, 'phil/texts.html', context=context)
 
-
-def text(request, text_slug):
-    art = get_object_or_404(Articles, slug=text_slug)
-    context = {
-        'text': art,
-        'menu': menu,
-        'title': art.title,
-    }
-    return render(request, 'phil/text.html', context=context)
 
 def addtext(request):
     if request.method == 'POST':
@@ -242,7 +223,6 @@ class RegisterUser(DataMixin, CreateView):
 def showtexts(request):
     context = {
         'title': 'Заметки',
-        'menu': menu,
         'texts': Articles.objects.all(),
     }
     return render(request, 'phil/texts.html', context=context)
@@ -254,7 +234,6 @@ def text(request, text_slug):
     art = get_object_or_404(Articles, slug=text_slug)
     context = {
         'text': art,
-        'menu': menu,
         'title': art.title,
     }
     return render(request, 'phil/text.html', context=context)
@@ -269,6 +248,6 @@ def addtext(request):
             return redirect('texts')
     else:
         form = AddTextForm()
-    return render(request, 'phil/addtext.html', {'form': form, 'menu': menu, 'title': 'Добавление заметки'})
+    return render(request, 'phil/addtext.html', {'form': form, 'title': 'Добавление заметки'})
 
 

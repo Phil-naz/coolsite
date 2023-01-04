@@ -1,4 +1,4 @@
-#!/Users/macbookair/Documents/Python/DJANGO/djsite/venv/bin/python3
+#!/Users/macbookair/Documents/Python/DJANGO/djsite/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

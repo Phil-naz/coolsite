@@ -1,34 +1,47 @@
 {% extends 'phil/base.html' %}
+{% load i18n %}
 
 {% block content %}
-<h1>Разработка веб-проектов с использованием фреймворка Django (Python)</h1>
+<h1>{% trans 'Разработка веб-проектов с использованием фреймворка Django (Python)' %}</h1>
 
-<b>Практика:</b>
-<ul>Прошел <a href="https://www.youtube.com/watch?v=FyTL1bnUx5I&list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F" target="_blank">обучение Selfedu</a>, <a href="{% url 'home' %}" target="_blank">создал учебный проект "Women"</a> (ссылка на главную страницу учебного проекта)</a>.<br>
-<b>В проекте:</b>
-<li type="square">подбор статей с фотографией;</li>
-<li type="square">статьи разделены на категории, можно выбрать отображение статей по определенным категориям;</li>
-    <li type="square">создание <a href="{% url 'register' %}" target="_blank">регистрации</a> и <a href="{% url 'login' %}" target="_blank">авторизации</a> пользователей;</li>
-<li type="square"><a href="{% url 'add_page' %}" target="_blank">добавление статей на сайт с фотографией.</a> Возможно сделать только зарегистрированным и авторизованным пользователям;</li>
-<li type="square">для маршрутизации к статьям используются слаги (slug);</li>
-<li type="square">использование MIXINs для того, чтобы убрать дублирование кода;</li>
-<li type="square">использование постраничной навигации (пагинация);</li>
+<b>{% trans 'Практика:' %}</b>
+<ul>{% trans 'Прошел ' %}<a href="https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi" target="_blank">{% trans 'курс John Elder' %}</a>, <a href="/blog/" target="_blank">{% trans 'создал учебный проект Create A Simple Blog With Python and Django' %}</a>. <br>
+<b>{% trans 'В проекте:' %}</b>
+<li type="square">{% trans 'создание блога;' %}</li>
+<li type="square">{% trans 'возможность создания категорий и присвоение категории записям блога;' %}</li>
+<li type="square">{% trans 'создание SLUG-адресов к категориям;' %}</li>
+<li type="square">{% trans 'создание ' %}<a href="/members/register/" target="_blank">{% trans 'регистрации ' %}</a>{% trans 'и ' %}<a href="/members/login/" target="_blank">{% trans 'авторизации ' %}</a>{% trans 'пользователей;' %}</li>
+<li type="square"><a href="/blog/add_post/" target="_blank">{% trans 'добавление постов на сайт с фотографией. Также есть возможность форматирования текста поста. ' %}</a>{% trans 'Возможно сделать только зарегистрированным и авторизованным пользователям;' %}</li>
+<li type="square">{% trans 'возможность редактирования и удаления постов определенным пользователям;' %}</li>
+<li type="square">{% trans 'создание системы лайков;' %}</li>
+<li type="square">{% trans 'создание системы комментариев поста;' %}</li>
 </ul>
 
-<ul><b>Дополнительно:</b>
-<li type="square">данный сайт полностью сделан на фреймворке Django: здесь создаю и выкладываю проекты (в том числе и учебные). Исходный код данного проекта можно посмотреть на <a href="https://github.com/Phil-naz/djsite" target="_blank">GitHub</a>;</li>
-<li type="square"><a href="{% url 'texts' %}" target="_blank">создал страницу с добавлением заметок (текстов) зарегистрированным и авторизованным пользователям. Можно добавлять изображение;</li>
-<li type="square"><a href="{% url 'measurements' %}" target="_blank">создаю приложение, в котором можно будет сохранять и смотреть динамику своих замеров тела;</a></li>
-<li type="square">создаю приложение со списком прочитанных книг, в котором можно будет писать свое описание книги и добавлять цитаты из книги;</li>
-<li type="square">владею HTML;</li>
-<li type="square">владею CSS;</li>
-<li type="square">владею Git & GitHub;</li>
-<li type="square">владею MySQL, SQLite, PostgreSQL;</li>
-<li type="square">фреймворк Django;</li>
-<li type="square">библиотеки NumPy, Pandas, Tkinter.</li>
+<ul>{% trans 'Прошел ' %}<a href="https://www.youtube.com/watch?v=FyTL1bnUx5I&list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F" target="_blank">{% trans 'обучение Selfedu ' %}</a>, <a href="{% url 'home' %}" target="_blank">{% trans 'создал учебный проект WOMEN ' %}</a>.<br>
+<b>{% trans 'В проекте:' %}</b>
+<li type="square">{% trans 'подбор статей с фотографией;' %}</li>
+<li type="square">{% trans 'статьи разделены на категории, можно выбрать отображение статей по определенным категориям;' %}</li>
+<li type="square">{% trans 'создание ' %}<a href="{% url 'register' %}" target="_blank">{% trans 'регистрации ' %}</a>{% trans 'и ' %}<a href="{% url 'login' %}" target="_blank">{% trans 'авторизации ' %}</a>{% trans 'пользователей;' %}</li>
+<li type="square"><a href="{% url 'add_page' %}" target="_blank">{% trans 'добавление статей на сайт с фотографией. ' %}</a>{% trans 'Возможно сделать только зарегистрированным и авторизованным пользователям;' %}</li>
+<li type="square">{% trans 'для маршрутизации к статьям используются слаги (slug);' %}</li>
+<li type="square">{% trans 'использование MIXINs для того, чтобы убрать дублирование кода;' %}</li>
+<li type="square">{% trans 'использование постраничной навигации (пагинация);' %}</li>
 </ul>
 
-<a href="{{ '../../about#soft-skills' }}"><b>Информация обо мне: мои SOFT-skills & привычки</b></a>
+<ul><b>{% trans 'Дополнительно:' %}</b>
+<li type="square">{% trans 'данный сайт полностью сделан на фреймворке Django: здесь создаю и выкладываю проекты (в том числе и учебные). Исходный код данного проекта можно посмотреть на ' %}<a href="https://github.com/Phil-naz/djsite" target="_blank">GitHub</a>;</li>
+<li type="square">{% trans 'этот сайт сделан мультиязычным' %};</li>
+<li type="square"><a href="{% url 'measurements' %}" target="_blank">{% trans 'создаю приложение, в котором можно будет сохранять и смотреть динамику своих замеров тела;' %}</a></li>
+<li type="square">{% trans 'создаю приложение со списком прочитанных книг, в котором можно будет писать свое описание книги и добавлять цитаты из книги;' %}</li>
+<li type="square">HTML;</li>
+<li type="square">CSS;</li>
+<li type="square">Git & GitHub;</li>
+<li type="square">{% trans 'базы данных MySQL, SQLite, PostgreSQL;' %}</li>
+<li type="square">{% trans 'фреймворк Django (PYTHON);' %}</li>
+<li type="square">{% trans 'библиотеки PYTHON: NumPy, Pandas, Tkinter.' %}</li>
+</ul>
+
+<a href="{{ '../../about#soft-skills' }}"><b>{% trans 'Информация обо мне: мои SOFT-skills & привычки' %}</b></a>
 <br><br>
 
 {% endblock content %}

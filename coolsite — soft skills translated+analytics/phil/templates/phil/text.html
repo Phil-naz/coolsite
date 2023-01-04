@@ -1,0 +1,46 @@
+{% extends 'phil/base.html' %}
+{% load phil_tags %}
+
+
+
+
+{% block content %}
+<table border="0" cellpadding="0">
+<tr>
+<!-- Left sidebar  -->
+	<td valign="top" class="leftchapters">
+	<ul>
+					{% if request.user.is_authenticated %}
+			<li><a href="{% url 'addtext' %}"><button><div align="center">Добавить заметку</div></button></a></li><br>
+					{% endif %}
+		<li class="leftchapters"><a href="{% url 'texts' %}">Все заметки</a></li>
+		{% text_list as text_list %}
+        {% for t in text_list %}
+			{% if t.pk == text.pk %}
+		<li class="selected">{{t.user}}: {{t.title}}</li>
+			{% else %}
+		<li class="leftchapters"><a href="{{ t.get_absolute_url }}">{{t.user}}: {{t.title}}</a></li>
+			{% endif %}
+		{% endfor %}
+
+    </ul>
+    </td>
+
+
+<br>
+	<td width="10"> </td>
+<td>
+<h1>{{text.user}}: {{text.title}}</h1>
+	<table><tr><td class="bottom" width="300">{{text.time_create}}</td></tr>	</table>
+
+{% if text.photo %}
+<p><img class="img-book" src="{{text.photo.url}}"></p>
+{% endif %}
+
+
+
+<p>{{text.text}}</p>
+
+</td><td width="50">&nbsp;</td> </tr></table>
+
+{% endblock content %}

@@ -1,0 +1,698 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-03 16:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:7
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: env/Lib/site-packages/django/views/templates/default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: phil/templates/phil/about.html:11 phil/templates/phil/about_django.html:5
+msgid "Разработка веб-проектов с использованием фреймворка Django (Python)"
+msgstr "Development of web projects using the Django framework (Python)"
+
+#: phil/templates/phil/about.html:12
+#: phil/templates/phil/about_analytics.html:10
+msgid "Аналитика (с использованием Excel, SQL, Python)"
+msgstr "Analytics (using Excel, SQL, Python)"
+
+#: phil/templates/phil/about.html:17
+msgid "Информация обо мне (кратко):"
+msgstr "Information about me (summary):"
+
+#: phil/templates/phil/about.html:19
+msgid ""
+"планирование: обычно планирую все в своей жизни. Есть план на долгосрочную "
+"перспективу (от 3х лет), среднесрочную (1-3г ода). В текущей жизни использую "
+"план на неделю (спринт), каждый день использую "
+msgstr ""
+"planning: I usually plan everything in my life. There is a plan for the long-"
+"term  perspective (from 3 years), medium-term (1-3 years). In my current "
+"life I use a plan for a week (sprint), every day I use "
+
+#: phil/templates/phil/about.html:19
+msgid "менеджер задач «Todoist»"
+msgstr "TODOIST Task Manager"
+
+#: phil/templates/phil/about.html:21
+msgid ""
+"считаю, что все знать невозможно, важна командная работа - каждый участник "
+"команды будет специализироваться на определенной части работы;"
+msgstr ""
+"I think it's impossible to know everything, teamwork is important - each "
+"member of the team will specialize in a certain part of the work;"
+
+#: phil/templates/phil/about.html:22
+msgid ""
+"все деньги, которые проходят мои руки (счетах) обязательно записаны. Для "
+"текущих доходов и расходов использую "
+msgstr ""
+"all the money that passes my hands (accounts) must be recorded. For current "
+"income and expenses I use "
+
+#: phil/templates/phil/about.html:22
+msgid "приложение «Drebedengi»"
+msgstr "application DREBEDENGI"
+
+#: phil/templates/phil/about.html:23
+msgid ""
+"чтобы постоянно не искать инструкцию как сделать что-то определенное, я "
+"записываю это для себя, то есть конспектирую действия. "
+msgstr ""
+"in order not to constantly look for instructions on how to do something "
+"specific, I take notes (write it down for myself) of the actions. "
+
+#: phil/templates/phil/about.html:23
+msgid "Пример конспекта по вреймворку «DJANGO»"
+msgstr "Example of notes on the DJANGO framework"
+
+#: phil/templates/phil/about.html:24
+msgid ""
+"считаю, что знаний много не бывает и учиться нужно всегда! Проходил "
+"обучения: «Управление персоналом», «Искусство продаж», «Контекст», «Деньги», "
+"«PYTHON для аналитиков»;"
+msgstr ""
+"I think that there is never much knowledge and you always need to learn! I "
+"passed trainings: Personnel Management, Art of sales, Context, Money, PYTHON "
+"for analysts;"
+
+#: phil/templates/phil/about.html:25
+msgid "делая обучаешься (обычно обучаюсь на практике);"
+msgstr "you learn by doing (usually I learn by practice);"
+
+#: phil/templates/phil/about.html:26
+msgid "в интернете можно найти (практически) любую информацию;"
+msgstr "you can find (almost) any information on the Internet;"
+
+#: phil/templates/phil/about.html:27
+msgid ""
+"по методологии SCRUM я - «Мудрый шут»: это человек, задающий неприятные "
+"вопросы или говорящий в лицо неудобную правду. Мало, кто выполняет эту роль, "
+"хотя она необходима в SCRUM-командах;"
+msgstr ""
+"according to the SCRUM methodology, I am a WISE FOOL: this is a person who "
+"asks unpleasantquestions or speaks an inconvenient truth to his face. Few "
+"people perform this role, although it is necessary in SCRUM teams;"
+
+#: phil/templates/phil/about.html:28
+msgid "люблю читать. По "
+msgstr "I like to read. By "
+
+#: phil/templates/phil/about.html:28
+msgid "ссылке "
+msgstr "the link "
+
+#: phil/templates/phil/about.html:28
+msgid "не все, что я прочел. Но принцип выбора книг и тематика понятны;"
+msgstr ""
+"that's not all I've read. But the principle of choosing books and the "
+"subject matter are clear;"
+
+#: phil/templates/phil/about.html:29
+msgid "я выбираю не курить;"
+msgstr "I choose not to smoke;"
+
+#: phil/templates/phil/about.html:30
+msgid "я выбираю не употреблять напитки, содержащие алкоголь."
+msgstr "I choose not to drink alcohol"
+
+#: phil/templates/phil/about.html:33
+msgid "Мои привычки:"
+msgstr "My habits:"
+
+#: phil/templates/phil/about.html:35
+msgid "Привычка "
+msgstr "A habbit "
+
+#: phil/templates/phil/about.html:35
+msgid ""
+"— автоматически воспроизводимое действие, исполнение которого инициируется "
+"некоторым сигналом (триггером привычки) и выполняется и завершается с "
+"чувством удовольствия. Сложившийся способ поведения, осуществление которого "
+"в определённой ситуации (играющей роль триггера, сигнала, запускающего "
+"действия привычки) приобретает для индивида характер потребности, "
+"побуждающей «совершать какие-нибудь действия, поступки». При формировании "
+"привычки неоднократно выполняется какое-либо действие, чрезвычайно важное "
+"значение имеет вызываемое самим осуществлением этого действия приятное "
+"эмоциональное переживание, так как оно является «усвоенным…, которое стало "
+"автоматическим и совершается без усилий». "
+msgstr ""
+"an automatically reproducible action, the execution of which is initiated by "
+"some signal (habit trigger) and is performed and completed with a sense of "
+"pleasure. The established way of behavior, the implementation of which in a "
+"certain situation (playing the role of a trigger, a signal that triggers the "
+"actions of a habit) acquires for the individual the character of a need that "
+"prompts \"to perform some actions, deeds\". When forming a habit, an action "
+"is repeatedly performed, a pleasant emotional experience caused by the very "
+"implementation of this action is extremely important, since it is "
+"\"learned ..., which has become automatic and is performed without effort.\" "
+
+#: phil/templates/phil/about.html:35
+msgid "Википедия"
+msgstr "Wikipedia"
+
+#: phil/templates/phil/about.html:37
+msgid ""
+"Читаю книги (минимум 1 час в день). Люблю читать деловую- и бизнес-"
+"литературу. В этом "
+msgstr ""
+"I read books (at least 1 hour a day). I like to read business literature. In "
+"this "
+
+#: phil/templates/phil/about.html:37
+msgid "списке "
+msgstr "list "
+
+#: phil/templates/phil/about.html:37
+msgid "не все, что я прочел. Но принцип выбора и тематика понятны."
+msgstr ""
+"not everything I've read. But the principle of choice and the subject matter "
+"are clear."
+
+#: phil/templates/phil/about.html:38
+msgid ""
+"Я выбираю «держать слово» и прикладывать все доступные усилия и возможности, "
+"чтобы все сбывалось так, как я пообещал. Если в чем-либо неуверен, я лучше "
+"промолчу. Отличное видео Владимира Герасичева, где описан подход, которого я "
+"придерживаюсь:"
+msgstr ""
+"I choose to KEEP MY WORD and put all available efforts and opportunities, so "
+"that everything comes true as I promised. If I'm not sure about anything, "
+"I'd rather keep silent. An excellent video by Vladimir Gerasichev, which "
+"describes the approach that I adhere to:"
+
+#: phil/templates/phil/about.html:40
+msgid ""
+"Я выбираю давать обещание, «держать слово», обычно все что выбираю делать, я "
+"делаю с хорошим настроем. "
+msgstr ""
+"I choose to make a promise, KEEP MY WORD, usually everything I choose to do, "
+"I do with a good mood. "
+
+#: phil/templates/phil/about.html:40
+msgid "Интервью полностью."
+msgstr "Full interview."
+
+#: phil/templates/phil/about.html:42
+msgid "Изучаю английский язык:"
+msgstr "I am learning English:"
+
+#: phil/templates/phil/about.html:44
+msgid ""
+"ежедневно использую для занятий приложение «Duolingo» (минимум 30 минут);"
+msgstr "I use the Duolingo app for classes every day (at least 30 minutes);"
+
+#: phil/templates/phil/about.html:45
+msgid "периодически смотрю фильмы на английском языке."
+msgstr "periodically I watch movies in English."
+
+#: phil/templates/phil/about.html:51
+msgid "Занятие спортом и физическая активность:"
+msgstr "Sports and physical activity:"
+
+#: phil/templates/phil/about.html:53
+msgid ""
+"ежедневно занимаюсь спортом (сначала делал зарядку обычную, но 05 октября "
+"2022г. дошел до 500 приседаний ежедневных, это уже сложно назвать «обычной "
+"зарядкой»);"
+msgstr ""
+"I do sports every day (at first I did regular exercises, but on October 05, "
+"2022 I reached 500 daily squats, it's hard to call it REGULAR EXERCISES);"
+
+#: phil/templates/phil/about.html:54
+msgid "прохожу не менее 7000 шагов в день (обычно больше);"
+msgstr "I walk at least 7000 steps a day (usually more);"
+
+#: phil/templates/phil/about.html:55
+msgid "катаюсь на горных лыжах."
+msgstr "I go skiing."
+
+#: phil/templates/phil/about.html:61
+msgid ""
+"Закаливание. Начал зимой окунанием в водоем (прорубь) после парилки, сейчас "
+"в душе в завершение стою минуту под исключительно холодной водой."
+msgstr ""
+"Hardening. I started in winter by dipping into a pond (ice hole) after a "
+"steam room, now in the shower at the end I stand for a minute under "
+"exceptionally cold water."
+
+#: phil/templates/phil/about.html:62
+msgid ""
+"Обычно, первые ассоциации со словом \"привычка\" это: вредная привычка и "
+"курение. Я выбираю:"
+msgstr ""
+"Usually, the first associations with the word \"habit\" are: a bad habit and "
+"smoking. I choose:"
+
+#: phil/templates/phil/about.html:64
+#, fuzzy
+#| msgid "я выбираю не курить;"
+msgid "не курить"
+msgstr "I choose not to smoke;"
+
+#: phil/templates/phil/about.html:65
+#, fuzzy
+#| msgid "я выбираю не употреблять напитки, содержащие алкоголь."
+msgid "не употреблять напитки, содержащие алкоголь"
+msgstr "I choose not to drink alcohol"
+
+#: phil/templates/phil/about_analytics.html:11
+msgid ""
+"Люблю принятие решений, основанное на цифрах (фактах). Данные, основанные на "
+"цифрах, красиво и понятно визуализирую (графики, таблицы и пр.)"
+msgstr ""
+"I like decision-making based on numbers (facts). I visualize data based on "
+"numbers beautifully and clearly (graphs, tables, etc.)"
+
+#: phil/templates/phil/about_analytics.html:13
+msgid "владею Excel & GoogleSheets;"
+msgstr "I use Excel & Google Sheets;"
+
+#: phil/templates/phil/about_analytics.html:14
+msgid "владею Git & GitHub;"
+msgstr "I use Git & GitHub;"
+
+#: phil/templates/phil/about_analytics.html:15
+msgid "владею MySQL, SQLite, PostgreSQL;"
+msgstr "I use MySQL, SQLite, PostgreSQL;"
+
+#: phil/templates/phil/about_analytics.html:16
+msgid "фреймворк Django;"
+msgstr "Django framework;"
+
+#: phil/templates/phil/about_analytics.html:17
+#: phil/templates/phil/about_django.html:41
+msgid "библиотеки PYTHON: NumPy, Pandas, Tkinter."
+msgstr "PYTHON libraries: NumPy, Pandas, Tkinter."
+
+#: phil/templates/phil/about_analytics.html:20
+msgid "Система, созданная мною на Excel (Google Sheets):"
+msgstr "The system I created on Excel (Google Sheets):"
+
+#: phil/templates/phil/about_analytics.html:21
+msgid "Преимущества Excel (Google Sheets):"
+msgstr "Advantages of Excel (Google Sheets):"
+
+#: phil/templates/phil/about_analytics.html:22
+msgid "Все можно считать (учитывать) и сохранять;"
+msgstr "Everything can be counted (taken into account) and saved;"
+
+#: phil/templates/phil/about_analytics.html:23
+msgid ""
+"На основе сохранённых данных можно планировать расходы и поступления в "
+"будущем;"
+msgstr ""
+"Based on the saved data, it is possible to plan expenses and receipts in "
+"the  future;"
+
+#: phil/templates/phil/about_analytics.html:24
+msgid ""
+"Можно настроить удаленную передачу информации. Нужен только интернет. У вас "
+"будет доступ всегда, даже если куда-нибудь уедете. Доступ возможен даже с "
+"мобильного телефона;"
+msgstr ""
+"You can set up remote transmission of information. Only the Internet is "
+"needed. You  will always have access, even if you go somewhere. Access is "
+"possible even from a mobile phone;"
+
+#: phil/templates/phil/about_analytics.html:25
+msgid ""
+"Все можно посмотреть с любого современного смартфона. Компьютер не нужен. "
+"Для настройки отображения нужен только пользовательский навык, не нужно "
+"привлекать системного администратора;"
+msgstr ""
+"Everything can be viewed from any modern smartphone. You don't need a "
+"computer. Only a user skill is needed to configure the display, there is no "
+"need to involve a system administrator;"
+
+#: phil/templates/phil/about_analytics.html:26
+msgid ""
+"Возможность настроить удобный вам вид отчета. Акцентировать важные данные, "
+"убрать ненужные;"
+msgstr ""
+"The ability to customize the report view that is convenient for you. "
+"Emphasize important data, remove unnecessary;"
+
+#: phil/templates/phil/about_analytics.html:27
+msgid ""
+"Специалистов Excel довольно много. Без проблем можно найти альтернативного "
+"специалиста, в отличие от специальных программ (даже для распространенной 1С "
+"труднее)."
+msgstr ""
+"There are quite a lot of Excel specialists. Without problems, you can find "
+"an alternative  specialist, unlike special programs."
+
+#: phil/templates/phil/about_analytics.html:30
+msgid "Скачать:"
+msgstr "Download"
+
+#: phil/templates/phil/about_analytics.html:31
+msgid "Схема крупнее (png файл);"
+msgstr "Larger diagram (png file);"
+
+#: phil/templates/phil/about_analytics.html:32
+msgid "Сводная таблица (GSheets файл);"
+msgstr "Summary table (GSheets file);"
+
+#: phil/templates/phil/about_analytics.html:33
+msgid "Файл учета торговых точек (Excel файл)."
+msgstr "Point of sale accounting file (Excel file)."
+
+#: phil/templates/phil/about_analytics.html:36
+msgid ""
+"Аналитика. Учитываем отношение к прошлому месяцу и к среднему значению за "
+"год:"
+msgstr ""
+"Analytics. We take into account the ratio to the last month and to the "
+"average value for the year:"
+
+#: phil/templates/phil/about_analytics.html:39
+msgid "«Формулка». Одна из. Таких формул там много:"
+msgstr "One of formula. There are many such formulas out there:"
+
+#: phil/templates/phil/about_analytics.html:42
+#: phil/templates/phil/about_django.html:44
+msgid "Информация обо мне: мои SOFT-skills & привычки"
+msgstr "Information about me: my SOFT-skills & habbits"
+
+#: phil/templates/phil/about_django.html:7
+msgid "Практика:"
+msgstr "Practice:"
+
+#: phil/templates/phil/about_django.html:8
+#: phil/templates/phil/about_django.html:20
+msgid "Прошел "
+msgstr "Passed "
+
+#: phil/templates/phil/about_django.html:8
+msgid "курс John Elder"
+msgstr "John Elder course"
+
+#: phil/templates/phil/about_django.html:8
+msgid "создал учебный проект Create A Simple Blog With Python and Django"
+msgstr "created learning project Create A Simple Blog With Python and Django"
+
+#: phil/templates/phil/about_django.html:9
+#: phil/templates/phil/about_django.html:21
+msgid "В проекте:"
+msgstr "In the project:"
+
+#: phil/templates/phil/about_django.html:10
+msgid "создание блога;"
+msgstr "creating a blog;"
+
+#: phil/templates/phil/about_django.html:11
+msgid "возможность создания категорий и присвоение категории записям блога;"
+msgstr "ability to create categories and assign a category to blog posts;"
+
+#: phil/templates/phil/about_django.html:12
+msgid "создание SLUG-адресов к категориям;"
+msgstr "creating SLUG addresses to categories;"
+
+#: phil/templates/phil/about_django.html:13
+#: phil/templates/phil/about_django.html:24
+msgid "создание "
+msgstr "creature "
+
+#: phil/templates/phil/about_django.html:13
+#: phil/templates/phil/about_django.html:24
+#, fuzzy
+#| msgid "Регистрация"
+msgid "регистрации "
+msgstr "Registration"
+
+#: phil/templates/phil/about_django.html:13
+#: phil/templates/phil/about_django.html:24
+msgid "и "
+msgstr "and "
+
+#: phil/templates/phil/about_django.html:13
+#: phil/templates/phil/about_django.html:24
+msgid "авторизации "
+msgstr "authorizations "
+
+#: phil/templates/phil/about_django.html:13
+#: phil/templates/phil/about_django.html:24
+msgid "пользователей;"
+msgstr "users;"
+
+#: phil/templates/phil/about_django.html:14
+msgid ""
+"добавление постов на сайт с фотографией. Также есть возможность "
+"форматирования текста поста. "
+msgstr ""
+"adding posts to a website with a photo. There is also the possibility of "
+"formatting the text of the post. "
+
+#: phil/templates/phil/about_django.html:14
+#: phil/templates/phil/about_django.html:25
+msgid ""
+"Возможно сделать только зарегистрированным и авторизованным пользователям;"
+msgstr "It is possible to make only registered and authorized users;"
+
+#: phil/templates/phil/about_django.html:15
+msgid ""
+"возможность редактирования и удаления постов определенным пользователям;"
+msgstr "the ability to edit and delete posts to certain users;"
+
+#: phil/templates/phil/about_django.html:16
+msgid "создание системы лайков;"
+msgstr "creating a system of likes;"
+
+#: phil/templates/phil/about_django.html:17
+msgid "создание системы комментариев поста;"
+msgstr "creating a post comment system;"
+
+#: phil/templates/phil/about_django.html:20
+msgid "обучение Selfedu "
+msgstr "selfedu training"
+
+#: phil/templates/phil/about_django.html:20
+msgid "создал учебный проект WOMEN "
+msgstr "created a training project WOMEN "
+
+#: phil/templates/phil/about_django.html:22
+msgid "подбор статей с фотографией;"
+msgstr "selection of articles with a photo;"
+
+#: phil/templates/phil/about_django.html:23
+msgid ""
+"статьи разделены на категории, можно выбрать отображение статей по "
+"определенным категориям;"
+msgstr ""
+"articles are divided into categories, you can choose to display articles by "
+"certain categories;"
+
+#: phil/templates/phil/about_django.html:25
+msgid "добавление статей на сайт с фотографией. "
+msgstr "adding articles to a website with a photo. "
+
+#: phil/templates/phil/about_django.html:26
+msgid "для маршрутизации к статьям используются слаги (slug);"
+msgstr "slugs are used for routing to articles;"
+
+#: phil/templates/phil/about_django.html:27
+msgid "использование MIXINs для того, чтобы убрать дублирование кода;"
+msgstr "using MIXINs to remove code duplication;"
+
+#: phil/templates/phil/about_django.html:28
+msgid "использование постраничной навигации (пагинация);"
+msgstr "using paginated navigation (pagination);"
+
+#: phil/templates/phil/about_django.html:31
+msgid "Дополнительно:"
+msgstr "Additionally:"
+
+#: phil/templates/phil/about_django.html:32
+msgid ""
+"данный сайт полностью сделан на фреймворке Django: здесь создаю и выкладываю "
+"проекты (в том числе и учебные). Исходный код данного проекта можно "
+"посмотреть на "
+msgstr ""
+"this site is completely made on the Django framework: here I create and "
+"upload projects (including educational ones). The source code of this "
+"project can be  viewed at "
+
+#: phil/templates/phil/about_django.html:33
+msgid "этот сайт сделан мультиязычным"
+msgstr "this site is made multilingual"
+
+#: phil/templates/phil/about_django.html:34
+msgid ""
+"создаю приложение, в котором можно будет сохранять и смотреть динамику своих "
+"замеров тела;"
+msgstr ""
+"I am creating an application in which it will be possible to save and watch "
+"the dynamics of my body measurements;"
+
+#: phil/templates/phil/about_django.html:35
+msgid ""
+"создаю приложение со списком прочитанных книг, в котором можно будет писать "
+"свое описание книги и добавлять цитаты из книги;"
+msgstr ""
+"I am creating an application with a list of books I have read, in which you "
+"can write your description of the book and add quotes from the book;"
+
+#: phil/templates/phil/about_django.html:39
+#, fuzzy
+#| msgid "владею MySQL, SQLite, PostgreSQL;"
+msgid "базы данных MySQL, SQLite, PostgreSQL;"
+msgstr "I use MySQL, SQLite, PostgreSQL;"
+
+#: phil/templates/phil/about_django.html:40
+#, fuzzy
+#| msgid "фреймворк Django;"
+msgid "фреймворк Django (PYTHON);"
+msgstr "Django framework;"
+
+#: phil/templates/phil/base.html:32
+msgid "Мои HARD & SOFT скилы"
+msgstr "My HARD & SOFT Skills"
+
+#: phil/templates/phil/base.html:33
+msgid "Книги и цитаты"
+msgstr "Books and Quotes"
+
+#: phil/templates/phil/base.html:34
+#: phil/templates/phil/measurements_making.html:11
+msgid "Замеры тела"
+msgstr "Body measurements"
+
+#: phil/templates/phil/base.html:38
+msgid "Выйти"
+msgstr "Log out"
+
+#: phil/templates/phil/base.html:40
+msgid "Войти"
+msgstr "Log in"
+
+#: phil/templates/phil/base.html:40
+msgid "Регистрация"
+msgstr "Registration"
+
+#: phil/templates/phil/base.html:97
+msgid ""
+"Частичное или полное копирование информации с данного сайта для "
+"распространения на других ресурсах, в том числе и бумажных, без разрешения "
+"запрещено."
+msgstr "Copyright © All Rights Reserved"
+
+#: phil/templates/phil/book.html:13 phil/templates/phil/books.html:12
+msgid "Добавить книгу"
+msgstr "Add a book"
+
+#: phil/templates/phil/book.html:15 phil/templates/phil/books.html:14
+msgid "Все книги"
+msgstr "All books"
+
+#: phil/templates/phil/books.html:53
+msgid "Описание и цитаты"
+msgstr "Description and Quotes"
+
+#: phil/templates/phil/measurements_making.html:12
+msgid ""
+"Приложение, которое позволит вам вносить замеры своего тела находится в "
+"разработке. Оно позволит вам вносить замеры своего тела:"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:16
+msgid "1. ПЛЕЧИ"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:17
+msgid "(по самому большому месту, шраму или родинке)"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:18
+msgid "2. ГРУДЬ"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:19
+msgid "(по соскам)"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:20
+msgid "3. ТАЛИЯ"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:21
+msgid "(по нижнему ребру)"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:22
+msgid "4. ЯГОДИЦЫ"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:23
+msgid "(по самому большому месту, шраму или родинке) "
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:24
+msgid "5. БЕДРА"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:25
+msgid "(левое и правое - по самому большому месту, шраму или родинке)"
+msgstr ""
+
+#: phil/templates/phil/measurements_making.html:27
+msgid ""
+"хранить историю и сравнивать ваши показатели с предшествующей датой. Идеи и "
+"предложения пишите на почту"
+msgstr ""

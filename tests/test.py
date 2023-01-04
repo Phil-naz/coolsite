@@ -1,1 +1,2 @@
-print('Title'|lower)
+import Tkinter
+Tkinter._test()

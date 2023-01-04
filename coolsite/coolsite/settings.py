@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'phil.na4u.ru']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,14 +43,9 @@ INSTALLED_APPS = [
     'captcha',
     'women.apps.WomenConfig',
     'phil.apps.PhilConfig',
-<<<<<<< HEAD
     'theblog',
     'members',
     'ckeditor',
-=======
-    'django.contrib.sites',
-    'account'
->>>>>>> origin/master
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -57,14 +53,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'account.middleware.LocaleMiddleware',
-    'account.middleware.TimezoneMiddleware',
 ]
 
 ROOT_URLCONF = 'coolsite.urls'
@@ -95,16 +90,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(os.path.join(BASE_DIR, "db.sqlite3")),
-<<<<<<< HEAD
-=======
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'phil_na4u_ru',
-        # 'USER': 'phil_na4u_ru',
-        # 'PASSWORD': 'BoDfuCoqdacog79',
-        #     #open('/Users/macbookair/Documents/Python/DJANGO/djsite/coolsite/coolsite/sql_pass.txt'),
-        # 'HOST': '45.86.182.171',
-        # 'PORT' : '5432',
->>>>>>> origin/master
     }
 }
 
@@ -166,3 +151,17 @@ SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 LOGIN_REDIRECT_URL = 'theblog_home'
 LOGOUT_REDIRECT_URL = 'theblog_home'
+
+gettext = lambda s: s
+LANGUAGES = (
+   ('en', gettext('English')),
+   ('ru', gettext('Russia')),
+)
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+MODELTRANSLATION_LANGUAGES = ('en', 'ru')
+
+
+LOCALE_PATHS = (
+     os.path.join(BASE_DIR, 'locale'),
+ )

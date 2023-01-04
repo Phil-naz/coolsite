@@ -1,0 +1,101 @@
+{% load static %}   <!-- This tag connecting to static files (CSS,JS,IMAGES) -->
+{% load phil_tags %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>{{ title }}</title>
+    	<link type="text/css" href="{% static 'phil/css/styles.css' %}" rel="stylesheet" />
+    	<link rel="shortcut icon" href="{% static 'phil/images/main.ico' %}" type="image/x-icon"/>
+</head>
+<body>
+
+{% block mainmenu %}
+
+		<div class="header">
+            <table width="100%"><tr><td width="170">
+            <a href="tel:+79216544880" class="contact"><img height="20" src="{% static 'phil/images/whatsapp.png' %}">+79216544880</a><br>
+            <a href="https://t.me/Phil_naz" class="contact"><img height="20" src="{% static 'phil/images/telegram.png' %}">@Phil_naz</a><br>
+            <a href="mailto:6544880@mail.ru" class="contact"><img height="20" src="{% static 'phil/images/email.png' %}">6544880@mail.ru</a><br>
+</td><td>
+			<ul class="mainmenu">
+
+			<li class="logo"><a href="{% url 'phil_home' %}"><div class="logo"></div></a><br>
+
+                </li>
+
+                <!-- LOGO -->
+            <!-- Top menu -->
+
+			<li><a href="{% url 'phil_about' %}">{% trans 'Мои HARD & SOFT скилы' %}</a></li>
+        	<li><a href="{% url 'books' %}">{% trans 'Книги и цитаты' %}</a></li>
+            <li><a href="{% url 'measurements_making' %}">{% trans 'Замеры тела' %}</a></li>
+
+
+			{% if request.user.is_authenticated %}
+			<li class="last"> {{user.first_name}} | <a href="{% url 'phil_logout' %}">{% trans 'Выйти' %}</a>
+			{% else %}
+			<li class="last"><a href="{% url 'phil_login' %}">{% trans 'Войти' %}</a> | <a href="{% url 'phil_register' %}">{% trans 'Регистрация' %}</a>
+			{% endif %}
+
+            <!-- Button for choose language -->
+
+                    <br><br>
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Go">
+                    </form></li>
+			<div class="clear"></div>
+				</td></tr></table>
+		</div>
+{% endblock mainmenu %}
+
+<table><tr><td height="40"> </td> </tr></table><br>
+{% block content %}
+{% endblock content %}
+
+
+	</div>
+
+<!-- Footer -->
+<table class="bottom">
+
+    <tr>
+		<td width="150px">
+            <a href="https://www.youtube.com/channel/UC-hDYi0n6e4Hzgu5IHKtP4Q" target="_blank"><img height="45" src="{% static 'phil/images/youtube.png' %}"></a>
+            <a href="https://vk.com/id668104" target="_blank"><img height="45" src="{% static 'phil/images/vk.png' %}"></a>
+            <a href="https://www.facebook.com/profile.php?id=100007783784310" target="_blank"><img height="45" src="{% static 'phil/images/fb.png' %}"></a>
+
+            </td>
+		<td align="center"><div>
+		<p>
+&copy; <script language="javascript" type="text/javascript"><!--
+var d = new Date();
+
+var day=new Array("Воскресенье","Понедельник","Вторник",
+"Среда","Четверг","Пятница","Суббота");
+
+
+var month=new Array("января","февраля","марта","апреля","мая","июня",
+"июля","августа","сентября","октября","ноября","декабря");
+
+document.write(d.getFullYear() + "г.");
+//--></script>
+		{% trans 'Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, без разрешения запрещено.' %}</p>
+	</div></td></tr>
+</table>
+</body>
+</html>
