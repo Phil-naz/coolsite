@@ -11,7 +11,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Функция render - встроенный шаблонизатор джанго                'DetailView' for 1 ordinary article, 'CreateView' for creating
 from .forms import *
 from .models import *
+from .serializers import WomenSerializer
 from .utils import *
+from rest_framework import generics
+
+class WomenAPIView(generics.ListAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
 
 
 # Menu in the file 'utils.py' (DataMixin)
@@ -71,7 +77,7 @@ def pageNotFound(request, exception):
 class ShowPost(DataMixin, DetailView):
     model = Women   # will show articles from 'model.py' - 'Women'
     template_name = 'women/post.html'   # Way fo template. By default, use 'women/women_list.html'
-    slug_url_kwarg = 'post_slug'   # transfer variable's name
+    slug_url_kwarg = 'post_slug'   # for don't use mandatory name 'slug'
     # pk_url_kwarg = 'pk'   # for using article's number
     context_object_name = 'post'   # set name, witch transfer to HTML-template
 

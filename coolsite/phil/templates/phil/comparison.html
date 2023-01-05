@@ -1,0 +1,68 @@
+{% extends 'phil/base.html' %}
+{% load static %}
+{% load phil_tags %}
+{% load i18n %}
+
+{% block content %}
+<div align="center">
+
+<h2>{% trans 'Comparison last body measurements with' %} {{ meas.Date|date:"Y-M-d" }}</h2>
+
+{% if request.user.is_authenticated %}
+
+            {% if request.user.id == last.user.id %}
+    <table border="1" cellspacing="0,5" cellpadding="4">
+<tr class="table_head">
+<td>{% trans 'Date' %}</td>
+<td>&nbsp;{% trans 'Shoulders' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Chest' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Waist' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Buttocks' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Hips' %}&nbsp;</td>
+<td>{% trans 'Weight' %}&nbsp;</td>
+</tr>
+
+<tr>
+<td nowrap align="center" class="column_main">{{meas.Date|date:"Y-M-d"}}</td>
+<td align="center">{{meas.Shoulders}}</td>
+<td align="center">{{meas.Chest}}</td>
+<td align="center">{{meas.Waist}}</td>
+<td align="center">{{meas.Buttocks}}</td>
+<td align="center">{{meas.Hips}}</td>
+<td align="center">{{meas.Weight}}</td></tr>
+
+<tr>
+<td nowrap align="center" class="column_main">{{last.Date|date:"Y-M-d"}}</td>
+<td align="center">{{last.Shoulders}}</td>
+<td align="center">{{last.Chest}}</td>
+<td align="center">{{last.Waist}}</td>
+<td align="center">{{last.Buttocks}}</td>
+<td align="center">{{last.Hips}}</td>
+<td align="center">{{last.Weight}}</td></tr>
+
+<tr>
+<td nowrap align="center" class="column_main">{% trans 'Difference' %}</td>
+<td align="center">{% if dif_Shoulders > 0 %}+{{dif_Shoulders}}{% else %}{{dif_Shoulders}}{% endif %}</td>
+<td align="center">{% if dif_Chest > 0 %}+{{dif_Chest}}{% else %}{{dif_Chest}}{% endif %}</td>
+<td align="center">{% if dif_Waist > 0 %}+{{dif_Waist}}{% else %}{{dif_Waist}}{% endif %}</td>
+<td align="center">{% if dif_Buttocks > 0 %}+{{dif_Buttocks}}{% else %}{{dif_Buttocks}}{% endif %}</td>
+<td align="center">{% if dif_Hips > 0 %}+{{dif_Hips}}{% else %}{{dif_Hips}}{% endif %}</td>
+<td align="center">{% if dif_Weight > 0 %}+{{dif_Weight}}{% else %}{{dif_Weight}}{% endif %}</td></tr>
+
+
+
+</table>
+</div>
+<br><br>
+     {% endif %}
+        {% else %}
+<td width="100%">
+    <div align="center"><b><a href="{% url 'phil_login' %}">{% trans 'Log in' %}</a>{% trans ', if necessary ' %}<a href="{% url 'phil_register' %}">{% trans 'register' %}</a>{% trans ', your body measurement history will be displayed here.' %}</b></div>
+    <br><br>
+</td>
+</tr>
+</table>
+	{% endif %}
+
+
+{% endblock %}

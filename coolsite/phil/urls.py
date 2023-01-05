@@ -2,7 +2,6 @@ from django.urls import path, re_path
 from .views import *
 
 urlpatterns = [
-#    path('', index, name='phil_home'),
     path('', about, name='phil_home'),
     path('books/', BooksList.as_view(), name='books'),
 #    path('book_def/', book_def, name='book_def'),
@@ -13,9 +12,8 @@ urlpatterns = [
     path('register/', RegisterUser.as_view(), name='phil_register'),
     path('logout/', phil_logout, name='phil_logout'),
     path('register/', RegisterUser.as_view(), name='phil_register'),
-    path('measurements_making', measurements_making, name='measurements_making'),
     path('measurements', measurements, name='measurements'),
-    path('measurement/<int:user_id>', measurement, name='measurement'),
+    path('comparison/<str:comp_pk>/', comparison, name='comparison'),
 
     path('texts', showtexts, name='texts'),
     path('text/<slug:text_slug>/', text, name='text'),
@@ -27,9 +25,9 @@ urlpatterns = [
     path('login/', LoginUser.as_view(), name='phil_login'),
     path('logout/', phil_logout, name='phil_logout'),
     path('register/', RegisterUser.as_view(), name='phil_register'),
-    path('measurements', measurements, name='measurements'),
-    path('', index, name='texts'),
     path('texts', showtexts, name='texts'),
     path('text/<slug:text_slug>/', text, name='text'),
     path('addtext', addtext, name='addtext'),
+    path('test/', test, name='test'),
+
 ]

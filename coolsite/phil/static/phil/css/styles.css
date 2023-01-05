@@ -11,7 +11,7 @@ a:hover {
 	font-weight: 600;
 	color: #ed7732;
 }
-a:visited {color: #f0cc58;}
+a:visited {color: #7d6003;}
 .about {color: black}
 a:hover.about {color: black}
 .header {
@@ -22,9 +22,15 @@ a:hover.about {color: black}
 	list-style: none;
 }
 .logo {                    /* Style for logo */
-	background: url('../images/logo.png') no-repeat;
 	width: 140px;
 	height: 60px;
+	background: #f2e0ae;   /* Background for top menu */
+
+}
+.logov1 {                    /* Style for logo */
+	background: url('../images/logov1.png') no-repeat;
+	width: 140px;
+	height: 50px;
 }
 ul.mainmenu {
 	margin: 0;
@@ -147,7 +153,9 @@ img.img-book {
     background: #3F4137;
     color: #FDC073;
 	text-decoration: none;
-	margin: 0px 0px 10px 0;
+	margin: 0px 0px 0px 0;
+	list-style: none;
+	width: 230px;
 }
 .form-label {
     display: inline-block;
@@ -204,11 +212,14 @@ img.img-book {
 .list-pages .page-num-selected:hover {
 	box-shadow: none;
 }
-.quote {
-	background: url('../images/quote.png') no-repeat;
-	width: 622px;
-	height: 350px;
+.table_head {
+	background: aqua;
+	font-weight: 600;
 	text-align: center;
-	vertical-align: middle;
-
 }
+.column_main {
+	background: orange;
+	font-weight: 600;
+	text-align: center;
+}
+

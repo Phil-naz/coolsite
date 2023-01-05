@@ -47,3 +47,4 @@ idna~=2.10
 urllib3~=1.26.3
 requests~=2.25.1
 six~=1.15.0
+djangorestframework~=3.14.0

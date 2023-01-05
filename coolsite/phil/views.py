@@ -8,30 +8,24 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import DetailView
+
 
 from .utils import *
 from .models import *
 from .forms import *
 
-
-# backup copy 04 January 2023. Commit 01/2023: it is multilangual
+# backup copy 2023 January 19. Commit 03/2023: adding & comparison of measurements
 
 #  main menu  is in 'base.html'
-
-def index(request):
+def test(request):
     context = {
-        'title': 'Страница Филиппа Назаренко',
-        'menu': menu,
+        'title': 'Bootstrap',
     }
-    return render(request, 'phil/index.html', context=context)
-
-def measurements_making(request):
-    context = {
-        'title': 'Замеры тела',
-    }
-    return render(request, 'phil/measurements_making.html', context=context)
+    return render(request, 'phil/test.html', context=context)
 
 def measurements(request):
+    last = Measurements.objects.order_by('-Date')[0]  # for last user's value
     if request.method == 'POST':
         form = AddMeasurements(request.POST, request.FILES)
         if form.is_valid():
@@ -42,27 +36,35 @@ def measurements(request):
     else:
         form = AddMeasurements()
     context = {
-        'title': 'Добавление замеров',
-        'menu': menu,
-        'measurements': Measurements.objects.all(),
+        'title': 'Add measurements',
+        'measurements': Measurements.objects.filter(user=request.user),
         'form': form,
+        'last':  last, # for last user's value
     }
     return render(request, 'phil/measurements.html', context=context)
 
-def measurement(request, user_id):
-    mes = get_object_or_404(Measurements, user_id = user_id)
+def comparison(request, comp_pk):
+    last = Measurements.objects.filter(user=request.user).order_by('-Date')[0]   # for last user's value
+    meas = get_object_or_404(Measurements, pk=comp_pk)
+    dif_Shoulders = int(last.Shoulders) - int(meas.Shoulders)
+    dif_Chest = int(last.Chest) - int(meas.Chest)
+    dif_Waist = int(last.Waist) - int(meas.Waist)
+    dif_Buttocks = int(last.Buttocks) - int(meas.Buttocks)
+    dif_Hips = int(last.Hips) - int(meas.Hips)
+    dif_Weight = round(float(last.Weight) - float(meas.Weight), 2)
     context = {
-        'mes': mes,
-        'measurments': Measurements.objects.all(),
-        'title': 'Body measurement',
+        'title': 'Comparison measurements',
+        'comp': comp_pk.title(),
+        'last': last,  # for last user's value
+        'meas': meas,
+        'dif_Shoulders': dif_Shoulders,
+        'dif_Chest': dif_Chest,
+        'dif_Waist': dif_Waist,
+        'dif_Buttocks': dif_Buttocks,
+        'dif_Hips': dif_Hips,
+        'dif_Weight': dif_Weight,
     }
-    return render(request, 'phil/measurement.html', context=context)
-
-def measurements(request):
-    context = {
-        'title': 'Body measurements',
-    }
-    return render(request, 'phil/measurements.html', context=context)
+    return render(request, 'phil/comparison.html', context=context)
 
 
 class BooksList(DataMixin, ListView):
@@ -72,7 +74,7 @@ class BooksList(DataMixin, ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        c_def = self.get_user_context(title= 'Книги')
+        c_def = self.get_user_context(title='Книги')
         return dict(list(context.items()) + list(c_def.items()))   # combine (объединяем) classes ‘context’ & c_def (local data for transferring)
 
 
@@ -95,18 +97,7 @@ class AddBook(LoginRequiredMixin, DataMixin, CreateView):  # 'LoginRequiredMixin
    # show mistake 403 for unauthorized users: 'raise_exception = True
    def get_context_data(self, *, object_list=None, **kwargs):
        context = super().get_context_data(**kwargs)
-       c_def = self.get_user_context(title= 'Добавить книгу')
-       return dict(list(context.items()) + list(c_def.items()))   # combine (объединяем) classes ‘context’ & c_def (local data for transferring)
-
-class AddBook(LoginRequiredMixin, DataMixin, CreateView):  # 'LoginRequiredMixin' on first place!!!
-   # 'LoginRequiredMixin' make this class only for authorized users
-   form_class = AddBookForm
-   template_name = 'phil/addbook.html'
-   login_url = reverse_lazy('admin:index')  # redirecting for unauthorized users to authorization page
-   # show mistake 403 for unauthorized users: 'raise_exception = True
-   def get_context_data(self, *, object_list=None, **kwargs):
-       context = super().get_context_data(**kwargs)
-       c_def = self.get_user_context(title= 'Добавить книгу')
+       c_def = self.get_user_context(title= 'Add a book')
        return dict(list(context.items()) + list(c_def.items()))   # combine (объединяем) classes ‘context’ & c_def (local data for transferring)
 
 
@@ -249,5 +240,4 @@ def addtext(request):
     else:
         form = AddTextForm()
     return render(request, 'phil/addtext.html', {'form': form, 'title': 'Добавление заметки'})
-
 

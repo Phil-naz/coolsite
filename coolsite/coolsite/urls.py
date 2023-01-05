@@ -18,6 +18,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('women/', include('women.urls')),
+    path('women/api/v1/womenlist/', WomenAPIView.as_view()),
     path('captcha/', include('captcha.urls')),
     # path('', include('phil.urls')),
     path('blog/', include('theblog.urls')),

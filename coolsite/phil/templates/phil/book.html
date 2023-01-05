@@ -6,13 +6,13 @@
 {% block content %}
 <table border="0" cellpadding="0" cellspacing="0">
 <tr>
-	<!-- Left sidebar  -->
-	<td valign="top" class="leftchapters">
+<!-- Left sidebar  -->
+	<td valign="top" class="leftchapters1">
 	<ul>
 					{% if request.user.is_authenticated %}
-			<li><a href="{% url 'addbook' %}"><button><div align="center">{% trans 'Добавить книгу' %}</div></button></a></li><br>
+			<a href="{% url 'addbook' %}"><button><div align="center">{% trans 'Add a book' %}</div></button></a><br><br>
 					{% endif %}
-		<li class="leftchapters"><a href="{% url 'books' %}">{% trans 'Все книги' %}</a></li>
+		<li class="leftchapters"><a href="{% url 'books' %}">{% trans 'All books' %}</a></li>
 		{% book_list as book_list %}
         {% for p in book_list %}
 			{% if p.pk == book.pk %}
@@ -37,10 +37,6 @@
 
 {{book.author_description|linebreaks}}
 
-{% if book.my_description %}
-	<h3 class="head">Моё описание / отзыв</h3>
-	{{book.my_description|linebreaks}}
-{% endif %}
 </td></tr></table>
 
 {% endblock content %}

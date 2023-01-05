@@ -1,4 +1,5 @@
 {% extends 'phil/base.html' %}
+{% load i18n %}
 
 {% block content %}
 <br>
@@ -15,7 +16,7 @@
 {% endfor %}
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-    <button type="submit">&nbsp;&nbsp;<b>Войти</b>&nbsp;&nbsp;</button><br>&nbsp;&nbsp;<br>
+    <button type="submit">&nbsp;&nbsp;<b>{% trans 'Log in' %}</b>&nbsp;&nbsp;</button><br>&nbsp;&nbsp;<br>
 </form>
 
 {% endblock %}

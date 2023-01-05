@@ -1,86 +1,56 @@
 {% extends 'phil/base.html' %}
 {% load static %}
 {% load phil_tags %}
-
-
+{% load i18n %}
 
 {% block content %}
-    <h1>{{title}}</h1>
 
-    <div align="center">
+<div align="center">
+<h1>{% trans 'Body measurements' %}</h1>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td><img src="{% static 'phil/images/measurements.png' %}"></td><td width="10"></td><td>
+{% trans '1. SHOULDERS' %}<br>
+{% trans '(by the largest place, scar or mole)' %}<br><br>
+{% trans '2. BREAST' %}<br>
+{% trans '(on the nipples)' %}<br><br>
+{% trans '3. WAIST' %}<br>
+{% trans '(along the lower edge)' %}<br><br>
+{% trans '4. BUTTOCKS' %}<br>
+{% trans '(by the largest place, scar or mole)' %}<br><br>
+{% trans '5. HIPS' %}<br>
+{% trans '(left and right - by the largest place, scar or mole)' %}
+</td></tr></table><br>
+{% trans 'keep a history of body measurements and compare it with the previous date.' %}<br>
 
-        <b>An application that will allow you to take measurements of your body is in development. It will allow you to record measurements of your body:</b>
-        <br><br><img src="{% static 'phil/images/measurements.png' %}"><br>
-    </b><br>
-    </div>
+</b><br>
+</div>
+            <!-- Start changing page for comparison body measurements -->
+{% if measurements %}
+<div class="dropdown" align="center">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    {% trans 'Comparison last with measurements from' %}
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          {% for item in measurements %}
+    <li><a class="dropdown-item" href="{% url 'comparison' item.pk %}">{{ item.Date|date:"Y-M-d" }}</a></li>
+                          {% endfor %}
 
-    <br>
+  </ul>
+</div><br>
+{% endif %}
+</td>
+</tr>
+<!-- End changing page for comparison body measurements -->
 
 <table border="0" cellpadding="0" width="100%"">
+
+
+<!--Start adding of body measurements-->
+    {% if request.user.is_authenticated %}
 <tr valign="top">
-<td width="450" bgcolor="#eee" align="center">
-<!-- Left sidebar  -->
-    {% if request.user.is_authenticated %}
-
-  <h2>Story of body measurements</h2>
-<table border="1" cellspacing="0,5" cellpadding="4">
-<tr class="table_head">
-<td>Date</td>
-<td>Shoulders</td>
-<td>Chest</td>
-<td>Waist</td>
-<td>Buttocks</td>
-<td>Hips</td>
-<td>Weight</td>
-</tr>
-
-
-
-          {% for m in measurements %}
-            {% if request.user.id == m.user.id %}
-<tr class="table_data">
-<td nowrap>{{m.Date|date:"d-M-Y"}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Shoulders}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Chest}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Waist}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Buttocks}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Hips}}</td>
-     {% endif %}
-            {% if request.user.id == m.user.id %}
-<td>{{m.Weight}}</td>
-
-     {% endif %}
-
-          {% endfor %}
-
-</tr>
-</table>
-</td>
-
-    {% else %}
-<td width="100%">
-    <div align="center"><b><a href="{% url 'phil_login' %}">Log in</a>, if necessary <a href="{% url 'phil_register' %}">register</a>, your body measurement history will be displayed here.</b></div>
-    <br><br>
-</td>
-</tr>
-</table>
-</td>
-	{% endif %}
-
-
-    {% if request.user.is_authenticated %}
 <td width="10">&nbsp;</td>
-<td>
+<td width="200">
+    <h2>{% trans 'Add measurements' %}</h2>
     <form action="{% url 'measurements' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
@@ -90,9 +60,65 @@
     <div class="form-error">{{ f.errors }}</div>
     {% endfor %}
 
-    <button type="submit" class="button_measurements">Add</button><br><br>
+    <button type="submit" class="button_measurements">{% trans 'Add' %}</button><br><br>
     </form></div>
 </td>
+<td width="10">&nbsp;</td>
+<!--End adding of body measurements-->
+
+
+
+<!--Start history of body measurements-->
+{% if measurements %}
+
+<td width="550" bgcolor="#eee" align="center">
+    {% if request.user.is_authenticated %}
+
+  <h2>{% trans 'History of body measurements' %}</h2>
+<table border="1" cellspacing="0,5" cellpadding="4">
+<tr class="table_head">
+<td>&nbsp;{% trans 'Date' %}</td>
+<td>&nbsp;{% trans 'Shoulders' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Chest' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Waist' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Buttocks' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Hips' %}&nbsp;</td>
+<td>&nbsp;{% trans 'Weight' %}&nbsp;</td>
+</tr>
+
+
+
+          {% for m in measurements %}
+            {% if request.user.id == m.user.id %}
+<tr>
+<td nowrap align="center" class="column_main">{{m.Date|date:"Y-M-d"}}</td>
+<td align="center">{{m.Shoulders}}</td>
+<td align="center">{{m.Chest}}</td>
+<td align="center">{{m.Waist}}</td>
+<td align="center">{{m.Buttocks}}</td>
+<td align="center">{{m.Hips}}</td>
+<td align="center">{{m.Weight}}</td>
+     {% endif %}
+
+          {% endfor %}
+</tr>
+</table>
+<br><br></td>
+<!--End history of body measurements-->
+
+    {% else %}
+<td width="100%">
+    <div align="center"><b><a href="{% url 'phil_login' %}">{% trans 'Log in' %}</a>{% trans ', if necessary ' %}<a href="{% url 'phil_register' %}">{% trans 'register' %}</a>{% trans ', your body measurement history will be displayed here.' %}</b></div>
+    <br><br>
+</td>
+</tr>
+</table>
+</td>
+	{% endif %}
+{% endif %}
+
+
+
 </tr>
 </table>
     </div>

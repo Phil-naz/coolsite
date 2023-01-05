@@ -2,46 +2,46 @@
 {% load i18n %}
 
 {% block content %}
-<h1>{% trans 'Разработка веб-проектов с использованием фреймворка Django (Python)' %}</h1>
+<h1>{% trans 'Development of web projects using the Django framework (Python)' %}</h1>
 
-<b>{% trans 'Практика:' %}</b>
-<ul>{% trans 'Прошел ' %}<a href="https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi" target="_blank">{% trans 'курс John Elder' %}</a>, <a href="/blog/" target="_blank">{% trans 'создал учебный проект Create A Simple Blog With Python and Django' %}</a>. <br>
-<b>{% trans 'В проекте:' %}</b>
-<li type="square">{% trans 'создание блога;' %}</li>
-<li type="square">{% trans 'возможность создания категорий и присвоение категории записям блога;' %}</li>
-<li type="square">{% trans 'создание SLUG-адресов к категориям;' %}</li>
-<li type="square">{% trans 'создание ' %}<a href="/members/register/" target="_blank">{% trans 'регистрации ' %}</a>{% trans 'и ' %}<a href="/members/login/" target="_blank">{% trans 'авторизации ' %}</a>{% trans 'пользователей;' %}</li>
-<li type="square"><a href="/blog/add_post/" target="_blank">{% trans 'добавление постов на сайт с фотографией. Также есть возможность форматирования текста поста. ' %}</a>{% trans 'Возможно сделать только зарегистрированным и авторизованным пользователям;' %}</li>
-<li type="square">{% trans 'возможность редактирования и удаления постов определенным пользователям;' %}</li>
-<li type="square">{% trans 'создание системы лайков;' %}</li>
-<li type="square">{% trans 'создание системы комментариев поста;' %}</li>
+<b>{% trans 'Practice:' %}</b>
+<ul>{% trans 'I passed ' %}<a href="https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi" target="_blank">{% trans 'course John Elder' %}</a>, <a href="/blog/" target="_blank">{% trans 'created a training project "Create A Simple Blog With Python and Django"' %}</a>. <br>
+<b>{% trans 'In the project:' %}</b>
+<li type="square">{% trans 'creating a blog;' %}</li>
+<li type="square">{% trans 'ability to create categories and assign a category to blog posts;' %}</li>
+<li type="square">{% trans 'creating SLUG addresses to categories;' %}</li>
+<li type="square">{% trans 'creature ' %}<a href="/members/register/" target="_blank">{% trans 'Registration ' %}</a>{% trans 'and ' %}<a href="/members/login/" target="_blank">{% trans 'authorizations ' %}</a>{% trans 'users;' %}</li>
+<li type="square"><a href="/blog/add_post/" target="_blank">{% trans 'adding posts to a website with a photo. There is also the possibility of formatting the text of the post.' %}</a> {% trans 'It is possible to make only registered and authorized users;' %}</li>
+<li type="square">{% trans 'the ability to edit and delete posts to certain users;' %}</li>
+<li type="square">{% trans 'creating a system of likes;' %}</li>
+<li type="square">{% trans 'creating a post comment system;' %}</li>
 </ul>
 
-<ul>{% trans 'Прошел ' %}<a href="https://www.youtube.com/watch?v=FyTL1bnUx5I&list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F" target="_blank">{% trans 'обучение Selfedu ' %}</a>, <a href="{% url 'home' %}" target="_blank">{% trans 'создал учебный проект WOMEN ' %}</a>.<br>
-<b>{% trans 'В проекте:' %}</b>
-<li type="square">{% trans 'подбор статей с фотографией;' %}</li>
-<li type="square">{% trans 'статьи разделены на категории, можно выбрать отображение статей по определенным категориям;' %}</li>
-<li type="square">{% trans 'создание ' %}<a href="{% url 'register' %}" target="_blank">{% trans 'регистрации ' %}</a>{% trans 'и ' %}<a href="{% url 'login' %}" target="_blank">{% trans 'авторизации ' %}</a>{% trans 'пользователей;' %}</li>
-<li type="square"><a href="{% url 'add_page' %}" target="_blank">{% trans 'добавление статей на сайт с фотографией. ' %}</a>{% trans 'Возможно сделать только зарегистрированным и авторизованным пользователям;' %}</li>
-<li type="square">{% trans 'для маршрутизации к статьям используются слаги (slug);' %}</li>
-<li type="square">{% trans 'использование MIXINs для того, чтобы убрать дублирование кода;' %}</li>
-<li type="square">{% trans 'использование постраничной навигации (пагинация);' %}</li>
+<ul>{% trans 'I passed ' %}<a href="https://www.youtube.com/watch?v=FyTL1bnUx5I&list=PLA0M1Bcd0w8xO_39zZll2u1lz_Q-Mwn1F" target="_blank">{% trans 'Selfedu training ' %}</a>, <a href="{% url 'home' %}" target="_blank">{% trans 'created a training project "Women"' %}</a>.<br>
+<b>{% trans 'In the project:' %}</b>
+<li type="square">{% trans 'selection of articles with a photo;' %}</li>
+<li type="square">{% trans 'articles are divided into categories, you can choose to display articles by certain category;' %}</li>
+<li type="square">{% trans 'creature ' %}<a href="{% url 'register' %}" target="_blank">{% trans 'Registration ' %}</a>{% trans 'and ' %}<a href="{% url 'login' %}" target="_blank">{% trans 'authorizations ' %}</a>{% trans 'users;' %}</li>
+<li type="square"><a href="{% url 'add_page' %}" target="_blank">{% trans 'adding articles to a website with a photo. ' %}</a>{% trans 'It is possible to do this only for registered and authorized users;' %}</li>
+<li type="square">{% trans 'SLUGs are used for routing to articles;' %}</li>
+<li type="square">{% trans 'using MIXINs to remove code duplication;' %}</li>
+<li type="square">{% trans 'using paginated navigation (pagination);' %}</li>
 </ul>
 
-<ul><b>{% trans 'Дополнительно:' %}</b>
-<li type="square">{% trans 'данный сайт полностью сделан на фреймворке Django: здесь создаю и выкладываю проекты (в том числе и учебные). Исходный код данного проекта можно посмотреть на ' %}<a href="https://github.com/Phil-naz/djsite" target="_blank">GitHub</a>;</li>
-<li type="square">{% trans 'этот сайт сделан мультиязычным' %};</li>
-<li type="square"><a href="{% url 'measurements' %}" target="_blank">{% trans 'создаю приложение, в котором можно будет сохранять и смотреть динамику своих замеров тела;' %}</a></li>
-<li type="square">{% trans 'создаю приложение со списком прочитанных книг, в котором можно будет писать свое описание книги и добавлять цитаты из книги;' %}</li>
+<ul><b>{% trans 'Additionally:' %}</b>
+<li type="square">{% trans 'this site is completely made on the Django framework: here I create and upload projects (including educational ones). The source code of this project can be  viewed at ' %}<a href="https://github.com/Phil-naz/djsite" target="_blank">GitHub</a>;</li>
+<li type="square">{% trans 'this site is made multilingual' %};</li>
+<li type="square"><a href="{% url 'measurements' %}" target="_blank">{% trans 'I am creating an application in which it will be possible to save and watch the dynamics of my body measurements;' %}</a></li>
+<li type="square">{% trans 'I am creating an application with a list of books I have read, in which you can write your description of the book and add quotes from the book;' %}</li>
 <li type="square">HTML;</li>
 <li type="square">CSS;</li>
 <li type="square">Git & GitHub;</li>
-<li type="square">{% trans 'базы данных MySQL, SQLite, PostgreSQL;' %}</li>
-<li type="square">{% trans 'фреймворк Django (PYTHON);' %}</li>
-<li type="square">{% trans 'библиотеки PYTHON: NumPy, Pandas, Tkinter.' %}</li>
+<li type="square">{% trans 'I use MySQL, SQLite, PostgreSQL;' %}</li>
+<li type="square">{% trans 'Django framework (PYTHON);' %}</li>
+<li type="square">{% trans 'PYTHON libraries: NumPy, Pandas, Tkinter.' %}</li>
 </ul>
 
-<a href="{{ '../../about#soft-skills' }}"><b>{% trans 'Информация обо мне: мои SOFT-skills & привычки' %}</b></a>
+<a href="{{ '../../about#soft-skills' }}"><b>{% trans 'Information about me: my SOFT-skills & habits' %}</b></a>
 <br><br>
 
 {% endblock content %}
