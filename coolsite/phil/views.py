@@ -13,7 +13,6 @@ from .utils import *
 from .models import *
 from .forms import *
 
-
 # backup copy 04 January 2023. Commit 01/2023: it is multilangual
 
 #  main menu  is in 'base.html'
