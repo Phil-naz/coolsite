@@ -50,6 +50,10 @@ MANIFEST
 venv/
 env/
 desktop-tutorial/
+.vscode/
+.idea/
+.venv/
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
